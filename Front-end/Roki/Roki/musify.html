@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>musify</title>
+    <style>* {
+        padding: 0;
+        margin: 0;
+      }
+      body {
+        background-color: #121212;
+        font-family: 'Montserrat', sans-serif;
+      }
+      
+      .sidebar {
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        width: 196px;
+        background-color: #000000;
+        padding: 24px;
+      }
+      .sidebar .logo img {
+        width: 130px;
+      }
+      .sidebar .navigation ul {
+        list-style: none;
+        margin-top: 20px;
+      }
+      .sidebar .navigation ul li {
+        padding: 10px 0px;
+      }
+      .sidebar .navigation ul li a {
+        color: #b3b3b3;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 13px;
+      }
+      .sidebar .navigation ul li a:hover,
+      .sidebar .navigation ul li a:active,
+      .sidebar .navigation ul li a:focus {
+        color: #ffffff;
+      }
+      .sidebar .navigation ul li a:hover .fa,
+      .sidebar .navigation ul li a:active .fa,
+      .sidebar .navigation ul li a:focus .fa {
+        color: #b3b3b3;
+      }
+      .sidebar .navigation ul li .fa {
+        font-size: 20px;
+        margin-right: 10px;
+      }
+      .sidebar .navigation ul li a:hover,
+      .sidebar .navigation ul li a:hover,
+      .sidebar .navigation ul li a:hover{
+        color: rgb(249, 249, 252);
+        font-size: 15px;
+        /* text-decoration: underline; */
+      }
+      .sidebar .policies {
+        position: absolute;
+        bottom: 100px;
+      }
+      .sidebar .policies ul {
+        list-style: none;
+      }
+      .sidebar .policies ul li {
+        padding-bottom: 5px;
+      }
+      .sidebar .policies ul li a {
+        color: #b3b3b3;
+        font-weight: 500;
+        text-decoration: none;
+        font-size: 10px;
+      }
+      .sidebar .policies ul li a:hover,
+      .sidebar .policies ul li a:active,
+      .sidebar .policies ul li a:focus {
+        text-decoration: underline;
+      }
+      
+      .main-container {
+        margin-left: 245px;
+        margin-bottom: 100px;
+      }
+      
+      .topbar {
+        display: flex;
+        justify-content: space-between;
+        background-color: #101010;
+        padding: 14px 30px;
+      }
+      .topbar .prev-next-buttons button {
+        color: #7a7a7a;
+        cursor:default;
+        width: 34px;
+        height: 34px;
+        border-radius: 100%;
+        font-size: 18px;
+        border: 0px;
+        background-color: #090909;
+        margin-right: 10px;
+      }
+      .topbar .prev-next-buttons .button .chevron-left{
+        color: #7a7a7a;
+      }
+      .topbar .prev-next-buttons .button .chevron-right{
+        color: #7a7a7a;
+      }
+      .topbar .prev-next-buttons .button:hover{
+        color: white;
+    
+      }
+      .topbar .prev-next-buttons .button:hover{
+        color: white;
+    
+      }
+      .topbar .navbar {
+        display: flex;
+        align-items: center;
+        
+      }
+      .topbar .navbar ul {
+        list-style: none;
+      }
+      .topbar .navbar ul li {
+        display: inline-block;
+        margin: 0px 8px;
+        width: 70px;
+      }
+      .topbar .navbar ul li a {
+        color: #b3b3b3;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 14px;
+        letter-spacing: 1px;
+        
+      }
+      .topbar .navbar ul li a:hover,
+      .topbar .navbar ul li a:active,
+      .topbar .navbar ul li a:focus {
+        color: rgb(80, 186, 72);
+        font-size: 15px;
+        /* text-decoration: underline; */
+      }
+      .topbar .navbar ul li.divider {
+        color: #ffffff;
+        font-size: 26px;
+        margin: 0px 20px;
+        width: auto;
+      }
+      .topbar .navbar button {
+        background-color: #ffffff;
+        color: #000000;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 14px 30px;
+        border: 0px;
+        border-radius: 40px;
+        cursor: pointer;
+        margin-left: 20px;
+      }
+      .topbar .navbar button:hover,
+      .topbar .navbar button:active,
+      .topbar .navbar button:focus {
+        background-color: #f2f2f2;
+      }
+      .musify-playlists {
+        padding: 20px 40px;
+      }
+      .musify-playlists h2 {
+        color: #ffffff;
+        font-size: 22px;
+        margin-bottom: 20px;
+      }
+      .musify-playlists .list {
+        display: flex;
+        gap: 20px;
+        overflow: hidden;
+      }
+      .musify-playlists .list .item {
+        min-width: 140px;
+        width: 160px;
+        /* padding: 15px; */
+        background-color: #181818;
+        border-radius: 6px;
+        cursor: pointer;
+        transition: all ease 0.4s;
+      }
+      .musify-playlists .list .item:hover {
+        background-color: #252525;
+      }
+      .musify-playlists .list .item img {
+        width: 100%;
+        border-radius: 6px;
+        margin-bottom: 10px;
+      }
+      .musify-playlists .list .item .play .fa{
+        position: relative;
+      }
+      .musify-playlists .list .item .play .fa {
+        position: absolute;
+        right: 10px;
+        top: -60px;
+        /* padding: 18px; */
+        background-color: #1db954;
+        border-radius: 100%;
+        opacity: 0;
+        transition: all ease 0.4s;
+      }
+      .musify-playlists .list .item:hover .play .fa{
+        opacity: 1;
+        transform: translateY(-20px); 
+      }
+      .musify-playlists .list .item h4 {
+        color: #ffffff;
+        font-size: 14px;
+        margin-bottom: 10px;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      .musify-playlists .list .item p {
+        color: #989898;
+        font-size: 12px;
+        line-height: 20px;
+        font-weight: 600;
+      }
+      .musify-playlists hr {
+        margin: 70px 0px 0px;
+        border-color: #636363;
+      }
+      
+      .preview {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: linear-gradient(to right, #ae2896, #509bf5);
+        padding: 15px 40px;
+        display: flex;
+        justify-content: space-between;
+      }
+      .preview h6 {
+        color: #ffffff;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-size: 12px;
+        margin-bottom: 10px;
+      }
+      .preview p {
+        color: #ffffff;
+        font-size: 14px;
+        font-weight: 500;
+      }
+      .preview button {
+        background-color: #ffffff;
+        color: #000000;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 14px 30px;
+        border: 0px;
+        border-radius: 40px;
+        cursor: pointer;
+      }
+     
+      .side {
+            margin-top: 20px;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #09f075c8;
+            font-family: cursive;
+            text-align: center;
+        }
+        .logg{
+          text-decoration: none;
+        }
+        div.topbar{
+          position: fixed;
+          z-index: 1000;
+          width: 80%;
+        }
+        
+    </style>
+</head>
+<body>
+    <link rel="stylesheet" href="musify css.css">
+
+    <div class="sidebar">
+      <div class="logo">
+        <a>
+          <img class="music1" src="https://imgs.search.brave.com/91ZFjB_2kDlZrQtQgWbMPa-NhGJS0gjaGI8lcTGk1VQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tdXNp/Yy5tdXNpZnkuaXQv/d3AtY29udGVudC91/cGxvYWRzLzIwMjEv/MDEvbG9nby1tdXNp/ZnktMTUwLnBuZw" alt="Logo" />
+        </a>
+      </div>
+
+      <div class="navigation">
+        <ul>
+          <li>
+            <a>
+  
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" style="margin-top: 1em;" class="bi bi-house-door" viewBox="0 0 16 16">
+                <path d="M8.354 1.146a.5.5 0 0 0-.708 0l-6 6A.5.5 0 0 0 1.5 7.5v7a.5.5 0 0 0 .5.5h4.5a.5.5 0 0 0 .5-.5v-4h2v4a.5.5 0 0 0 .5.5H14a.5.5 0 0 0 .5-.5v-7a.5.5 0 0 0-.146-.354L13 5.793V2.5a.5.5 0 0 0-.5-.5h-1a.5.5 0 0 0-.5.5v1.293zM2.5 14V7.707l5.5-5.5 5.5 5.5V14H10v-4a.5.5 0 0 0-.5-.5h-3a.5.5 0 0 0-.5.5v4z"/>
+              </svg> Home
+            </a>
+          </li>
+
+          <li>
+            <a href="success.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+                <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+              </svg>  Search
+            </a>
+          </li>
+
+          <li>
+            <a href="playlist.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-collection" viewBox="0 0 16 16">
+                <path d="M2.5 3.5a.5.5 0 0 1 0-1h11a.5.5 0 0 1 0 1zm2-2a.5.5 0 0 1 0-1h7a.5.5 0 0 1 0 1zM0 13a1.5 1.5 0 0 0 1.5 1.5h13A1.5 1.5 0 0 0 16 13V6a1.5 1.5 0 0 0-1.5-1.5h-13A1.5 1.5 0 0 0 0 6zm1.5.5A.5.5 0 0 1 1 13V6a.5.5 0 0 1 .5-.5h13a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-.5.5z"/>
+              </svg>  Your Library
+            </a>
+          </li>
+          <li>
+            <a href="p.p.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-file-earmark-person" viewBox="0 0 16 16">
+                <path d="M11 8a3 3 0 1 1-6 0 3 3 0 0 1 6 0"/>
+                <path d="M14 14V4.5L9.5 0H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h8a2 2 0 0 0 2-2M9.5 3A1.5 1.5 0 0 0 11 4.5h2v9.255S12 12 8 12s-5 1.755-5 1.755V2a1 1 0 0 1 1-1h5.5z"/>
+              </svg>  About us
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="navigation">
+        <ul>
+          <li>
+            <a>
+              
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-collection-play" viewBox="0 0 16 16">
+                <path d="M2 3a.5.5 0 0 0 .5.5h11a.5.5 0 0 0 0-1h-11A.5.5 0 0 0 2 3m2-2a.5.5 0 0 0 .5.5h7a.5.5 0 0 0 0-1h-7A.5.5 0 0 0 4 1m2.765 5.576A.5.5 0 0 0 6 7v5a.5.5 0 0 0 .765.424l4-2.5a.5.5 0 0 0 0-.848l-4-2.5z"/>
+                <path d="M1.5 14.5A1.5 1.5 0 0 1 0 13V6a1.5 1.5 0 0 1 1.5-1.5h13A1.5 1.5 0 0 1 16 6v7a1.5 1.5 0 0 1-1.5 1.5zm13-1a.5.5 0 0 0 .5-.5V6a.5.5 0 0 0-.5-.5h-13A.5.5 0 0 0 1 6v7a.5.5 0 0 0 .5.5z"/>
+              </svg>  Create Playlist
+            </a>
+          </li>
+
+          <li>
+            <a href="roki.html">
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+                <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.565.565 0 0 0-.163-.505L1.71 6.745l4.052-.576a.525.525 0 0 0 .393-.288L8 2.223l1.847 3.658a.525.525 0 0 0 .393.288l4.052.575-2.906 2.77a.565.565 0 0 0-.163.506l.694 3.957-3.686-1.894a.503.503 0 0 0-.461 0z"/>
+              </svg>  Liked Songs
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="policies">
+        <ul>
+          <li>
+            <a>Cookies</a>
+          </li>
+          <li>
+            <a>Privacy</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="main-container">
+      <div class="topbar">
+        <div class="prev-next-buttons">
+          <button type="button" class="chevron-left">-</button>
+          <button type="button" class="chevron-right">+</button>
+        </div>
+
+        <div class="navbar">
+          <ul>
+            <li>
+              <a href="premium.html">Premium</a>
+            </li>
+            <li>
+              <a href="pppppppp.html">Support</a>
+            </li>
+            <li>
+              <a>Download</a>
+            </li>
+            <li class="divider">|</li>
+            <li>
+              <a href="sign up.html">Sign Up</a>`
+            </li>
+          </ul>
+          <button type="button"><a href="loginform.html" class="logg">Log In</a></button>
+        </div>
+      </div>
+
+      <div class="musify-playlists">
+        <h2>Musify Playlists</h2>
+<br>
+        <div class="list">
+          <div class="item">
+            <img src="https://i.scdn.co/image/ab67616d0000b2733b5e11ca1b063583df9492db" />
+            <div class="play">
+            </div>
+            <h4>Today's Top Hits</h4>
+            <p>Rema & Selena Gomez are on top of the...</p>
+          </div>
+
+          <div class="item">
+            <img src="https://imgs.search.brave.com/18LEn3ST3inXIa9Drhc_cepNqnSd8E4_Ghq69gOkdSE/rs:fit:500:0:0/g:ce/aHR0cHM6Ly90aW1l/c29mbHlyaWMuY29t/L3dwLWNvbnRlbnQv/dXBsb2Fkcy8yMDIz/LzA3L0Nob3JuaS5q/cGc" />
+            <div class="play">
+            </div>
+            <h4>Chorni</h4>
+            <p>New Music from Sidhu Moosewala and ...</p>
+          </div>
+
+          <div class="item">
+            <img src="https://imgs.search.brave.com/sYsvaIlsNNExy-XiJpB-ppj3GqFWKQPftiYmwrNTZP0/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9wYWdh/bG5ldy5jb20vY292/ZXJpbWFnZXMvQmVr/aGF5YWxpLUthYmly/LVNpbmdoLTUwMC01/MDAuanBn" />
+            <div class="play">
+            </div>
+            <h4>Bekhayali</h4>
+            <p>Meet the furious nature of love:...</p>
+          </div>
+
+          <div class="item">
+            <img src="https://imgs.search.brave.com/8QYPAMzNh4DV4lGOBu4yXGjJrZOqwrsHw24h8V644jw/rs:fit:200:200:1/g:ce/aHR0cHM6Ly9jZG4u/cGxheWxpc3RzLm5l/dC9pbWFnZXMvcGxh/eWxpc3RzL2ltYWdl/L2xhcmdlLzIwNjky/OC5qcGc" />
+            <div class="play">
+            </div>
+            <h4>Rock Classics</h4>
+            <p>Rock Legends & epic songs that continue t...</p>
+          </div>
+
+          <div class="item">
+            <img src="https://imgs.search.brave.com/NpQXrEYoF_2UTWbtqapOkt04eW5DLvLSR4_UNDSaZA4/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93d3cu/bWFnbmV0aWNtYWcu/Y29tLy5pbWFnZS9h/cl8zOjIsY19saW1p/dCxjc19zcmdiLHFf/YXV0bzpnb29kLHdf/NzAwL01Ua3dOalky/TmpVMk9EUTVNek01/TlRFMy9vY2Vhbi1w/bGF5bGlzdC1jb3Zl/cnMucG5n" />
+            <div class="play">
+            </div>
+            <h4>Chill Hits</h4>
+            <p>Kick back to the best new and recent chill...</p>
+          </div>
+
+          <div class="item">
+            <img src="https://imgs.search.brave.com/gc28SI_bkadNdZW31j-MzwPT1u0jaRHlHyKAkhoFW2g/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93d3cu/YmlsbGJvYXJkLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvbWVk/aWEvMDEtSi1CYWx2/aW4tQmFkLUJ1bm55/LXByZXNzLWJ5LVN0/aWxsei0yMDE5LWJp/bGxib2FyZC0xNTQ4/LmpwZz93PTk0MiZo/PTYyMyZjcm9wPTE" />
+            <div class="play">
+            </div>
+            <h4>Viva Latino</h4>
+            <p>Today's top Latin hits elevando nuestra...</p>
+          </div>
+
+          <div class="item">
+            <img src="https://imgs.search.brave.com/fvnTv8ZOY2DXObsbSqsFCsmIBckdvr9MjbBSJwsa52c/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pMS5z/bmRjZG4uY29tL2Fy/dHdvcmtzLTAwMTAx/NzQ5MzQzOC1xbG5l/NTMtdDUwMHg1MDAu/anBn" />
+            <div class="play">
+            </div>
+            <h4>Mega Hit Mix</h4>
+            <p>A mega mix of 75 favorites from the last...</p>
+          </div>
+
+          <div class="item">
+            <img src="https://imgs.search.brave.com/hZxCojWbwXEWPKy7T0FMeCRxrtytZ8eef9FniYI32YQ/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9iZWF0/cy1yaHltZXMtbGlz/dHMuY29tL3dwLWNv/bnRlbnQvdXBsb2Fk/cy8yMDIzLzA3L3Jh/bmtpbmctdGhlLXRv/cC0xNTAtYmVzdC05/MHMtcmFwLXNvbmdz/LXNub29wLWdpbi1q/dWljZS5qcGc" />
+            <div class="play">
+            </div>
+            <h4>All out 80s</h4>
+            <p>The biggest songs of the 1990s.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="musify-playlists">
+        <h2>Focus</h2>
+        <div class="list">
+          <div class="item">
+            <img src="https://imgs.search.brave.com/Xjy-qQOr9FtzS9CXioS63qBsz-opvA1IXSEnRJpwUcU/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NDFwajFtRFNmdkwu/anBn" />
+            <div class="play">
+            </div>
+            <h4>Peaceful Piano</h4>
+            <p>Relax and indulge with beautiful piano pieces</p>
+          </div>
+
+          <div class="item">
+            <img src="https://imgs.search.brave.com/rlWYWRNtCk-r4-Id6BvG9pPatTh0qCSJqIBOexEONlA/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pMC53/cC5jb20vaW5zaWdo/dG11c2ljLmNvL3dw/LWNvbnRlbnQvdXBs/b2Fkcy8yMDIyLzA5/L0RlZXAtRm9jdXMt/TXVzaWMtZm9yLVN0/dWR5aW5nLmpwZz9m/aXQ9MTAwMCwxMDAw/JnNzbD0x" />
+            <div class="play">
+            </div>
+            <h4>Deep Focus</h4>
+            <p>Keep calm and focus with ambient and pos...</p>
+          </div>
+
+          <div class="item">
+            <img src="https://imgs.search.brave.com/AgOvpjyZg3ndCK8sL47euiR2UmzpYiLjoMZ5tDzKV2I/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93d3cu/YmlsbGJvYXJkLmNv/bS93cC1jb250ZW50/L3VwbG9hZHMvMjAy/Mi8wNi9tb29kcy1z/aW5jZXJlLTIwMTct/YmlsbGJvYXJkLTEy/NDAuanBnP3c9MzAw" />
+            <div class="play">
+            </div>
+            <h4>Instrumental Study</h4>
+            <p>Focus with soft study music in the...</p>
+          </div>
+
+          <div class="item">
+            <img src="https://imgs.search.brave.com/boPIZa7Avp2PrenS3aq1fXcHhU2LFh5TgXGxpPWTa3g/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93d3cu/aGlnaHNub2JpZXR5/LmNvbS9zdGF0aWMt/YXNzZXRzL2RhdG8v/MTY4MjU4MzM5NS1s/b2ZpLWdpcmwuanBn" />
+            <div class="play">
+            </div>
+            <h4>chill lofi study beats</h4>
+            <p>The perfect study beats, twenty four...</p>
+          </div>
+
+          <div class="item">
+            <img src="https://imgs.search.brave.com/5q6EO5umWFVHFzNv_oobJ2SUOY7NPfNYuh5r06P1D6M/rs:fit:500:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAxLzg4LzkxLzA1/LzM2MF9GXzE4ODkx/MDUxMF9YWFFQMnZn/V1JPRVpvMFk4N21v/UFUzQzdCZjFYd1JS/Sy5qcGc" />
+            <div class="play">
+            </div>
+            <h4>Coding Mode</h4>
+            <p>Dedicated to all the programmers out there.</p>
+          </div>
+          
+          <div class="item">
+            <img src="https://imgs.search.brave.com/tJ2Qc4O8vVWEt0-OMT0e-xvYHCC-_UswXRzq5VlJbC8/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9hZW0u/ZHJvcGJveC5jb20v/Y21zL2NvbnRlbnQv/ZGFtL2Ryb3Bib3gv/YmxvZy9maWxlcy8y/MDIzL2p1bHkvZ2xv/cmlhLW1hcmstcG9k/Y2FzdC9mb2N1cy05/NjB4OTYwLnBuZy9f/amNyX2NvbnRlbnQv/cmVuZGl0aW9ucy9m/b2N1cy05NjB4OTYw/LndlYnA" />
+            <div class="play">
+            </div>
+            <h4>Focus Flow</h4>
+            <p>Uptempo instrumental hip hop beats.</p>
+          </div>
+
+          <div class="item">
+            <img src="https://imgs.search.brave.com/dkggW_HxC6h2aZ8eJ6KAsddViQVeAKbwlapeo6t2fsM/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9lLnNu/bWMuaW8vaS82MDAv/cy8yZTcyOThlMmYy/MzhlOGVmMWU1OGZl/NGZhYWI1YzQyYi8x/OTgzNjMzL3ByaW1v/cmRpYWwtc3Rvcm0t/YmVmb3JlLWNhbG0t/Q292ZXItQXJ0Lmpw/Zw" />
+            <div class="play">
+            </div>
+            <h4>Calm Before The Storm</h4>
+            <p>Calm before the storm music.</p>
+          </div>
+
+          <div class="item">
+            <img src="https://imgs.search.brave.com/OAZ-agqv95jg2ngyQ2kW_Sa7rNOSkS4vR3RCIQsqWL8/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tLm1l/ZGlhLWFtYXpvbi5j/b20vaW1hZ2VzL0kv/NzF4RkRYaWdWNUwu/anBn" />
+            <div class="play">
+            </div>
+            <h4>Beats to think to</h4>
+            <p>Focus with deep techno and tech house.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="musify-playlists">
+        <h2>Mood</h2>
+        <div class="list">
+          <div class="item">
+            <img src="https://imgs.search.brave.com/e01Ukk7QQf0az2Ju-Zj2dI4u6gEu0dr2hcP0tZQluBY/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9maW5k/bXVzaWNib3guY29t/L2Fzc2V0cy9pbWFn/ZXNhbGwvTW9vZC1C/b29zdGVyLmpwZw" />
+            <div class="play">
+            </div>
+            <h4>Mood Booster</h4>
+            <p>Get happy with today's dose of feel-good...</p>
+          </div>
+
+          <div class="item">
+            <img src="https://imgs.search.brave.com/dNrZ7inebQRTNB-JDgbbay8t8dN8joRf4spsqvToTeE/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5saWNkbi5jb20v/ZG1zL2ltYWdlL0M0/RTEyQVFHak1JRWtH/QzRITXcvYXJ0aWNs/ZS1jb3Zlcl9pbWFn/ZS1zaHJpbmtfNjAw/XzIwMDAvMC8xNjM0/MzA1NTkyNTU2P2U9/MjE0NzQ4MzY0NyZ2/PWJldGEmdD1HeERy/eWotVWZkVVBvRWdt/YmswOGgwS2VKMnMx/R0NpTUpCNTlSWVZw/M1Bn.jpeg" />
+            <div class="play">
+            </div>
+            <h4>Feelin' Good</h4>
+            <p>Feel good with this positively timeless...</p>
+          </div>
+
+          <div class="item">
+            <img src="https://imgs.search.brave.com/FZZVOhJZ2FuDfgD4MquUxvXSQk_ESxFOHKz21IlYyvs/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pMS5z/bmRjZG4uY29tL2Fy/dHdvcmtzLUk2cG1m/U0VxM3VnOS0wLXQ1/MDB4NTAwLmpwZw" />
+            <div class="play">
+            </div>
+            <h4>Dark & Stormy</h4>
+            <p>Beautifully dark, dramatic tracks.</p>
+          </div>
+
+          <div class="item">
+            <img src="https://imgs.search.brave.com/PJWh7Tn1O6nHq1NUENHqFp1uUIkY4J3XVrSWQvQWDZ0/rs:fit:500:0:0/g:ce/aHR0cHM6Ly90aHVt/YnMuZHJlYW1zdGlt/ZS5jb20vYi9wbGF5/aW5nLXBpYW5vLTE4/NDMxMjcwLmpwZw" />
+            <div class="play">
+            </div>
+            <h4>Feel Good Piano</h4>
+            <p>Happy vibes for an upbeat morning.</p>
+          </div>
+          <div class="item">
+            <img src="https://imgs.search.brave.com/9XQMXZWewIUGLX6ZQUbv3K1l7TSU-f-u3yp9pxjHIIM/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9taXJv/Lm1lZGl1bS5jb20v/djIvMSppaUtieDlT/SkRFVXBFbmdJcWlr/dThBLmpwZWc" />
+            <div class="play">
+            </div>
+            <h4>Feelin' Myself</h4>
+            <p>The hip-hop playlist that's a whole mood...</p>
+          </div>
+          <div class="item">
+            <img src="https://imgs.search.brave.com/EFr6s2lI6Lsm3SENNm2zh3JIWF8mN2XqDxTZEwEfKGQ/rs:fit:500:0:0/g:ce/aHR0cHM6Ly93d3cu/bXVzaWNncm90dG8u/Y29tL3dwLWNvbnRl/bnQvdXBsb2Fkcy8y/MDIyLzA5L2tpZHMt/ZGFuY2luZy1hbmQt/aGF2aW5nLWZ1bi10/by1oaXAtaG9wLW11/c2ljLWdyYXBoaWMu/anBn" />
+            <div class="play">
+            </div>
+            <h4>Chill Tracks</h4>
+            <p>Softer kinda dance</p>
+          </div>
+          <div class="item">
+            <img src="https://imgs.search.brave.com/tiPgs6a5RkQUGE-HnXzAhN8c5TYlmfRT-sESjqNNhD0/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9taXJv/Lm1lZGl1bS5jb20v/djIvMCpDZWY5RVQ4/MjVaa3NmNUxW.jpeg" />
+            <div class="play">
+            </div>
+            <h4>Feel-Good Indie Rock</h4>
+            <p>The best indie rock vibes - classic and...</p>
+          </div>
+          <div class="item">
+            <img src="https://imgs.search.brave.com/aFPi4l84mSft_BOQ3CzuJFJQE4BBig1iPCuP4teBho0/rs:fit:500:0:0/g:ce/aHR0cHM6Ly9pMS5z/bmRjZG4uY29tL2Fy/dHdvcmtzLWVTcEk4/QXFWdVhadnFjVTIt/SVVSbnR3LXQ1MDB4/NTAwLmpwZw" />
+            <div class="play">
+            </div>
+            <h4>Punjabbi 101</h4>
+            <p>Top 100 Punjabi songs of all time.....</p>
+          </div>
+        </div>
+
+        <hr>
+      </div>
+
+      <div class="preview">
+        <div class="text">
+          <h6>Preview of Musify</h6>
+          <p>Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.</p>
+        </div>
+        <div class="button">
+          <button type="button"><a href="sign up.html">Sign up free</a></button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

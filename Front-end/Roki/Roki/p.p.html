@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="about.css">
+  <title>About Us</title>
+  <style>body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #ff7e5f, #feb47b);
+    color: #fff;
+  }
+  
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    background-color: #f4d8d8;
+  }
+  
+  header {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+  
+  h1 {
+    color: #e74c3c;
+    font-size: 2em;
+  }
+  
+  #team {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+  }
+  
+  .team-member {
+    text-align: center;
+    width: 30%;
+    margin: 20px 0;
+    cursor: pointer;
+    background: linear-gradient(to right, #2ecc71, #3498db);
+    padding: 25px;
+    /* border-radius: 15px; */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background 0.4s ease-in-out, transform 0.4s ease-in-out;
+  }
+  
+  .team-member:hover {
+    background: linear-gradient(to right, #27ae60, #2980b9);
+    transform: scale(1.05);
+  }
+  
+  .team-member img {
+    max-width: 100%;
+    /* border-radius: 50%; */
+    margin-bottom: 15px;
+  }
+  
+  .team-member h3 {
+    color: #fff;
+    font-size: 1.2em;
+  }
+  
+  .bio {
+    display: none;
+    color: #555;
+  }
+  
+  #mission {
+    text-align: center;
+    margin-top: 50px;
+  }
+  
+  #mission h2 {
+    color: #e74c3c;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+  }
+  
+  #mission p {
+    color: #333;
+    font-size: 1.1em;
+  }
+  
+  footer{
+    height: 50px;
+    text-align: center;
+
+    background-color: black;
+    margin-top: 120px;
+}
+</style>
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <h1><u>About Us </u></h1>
+    </header>
+    <section id="team">
+      <div class="team-member" onmouseover="showBio('Paramveer')" onmouseout="hideBio('Paramveer')">
+        <img src="paramveer.jpg" alt="Paramveer Singh">
+        <h3>Paramveer Singh</h3>
+        <p id="Paramveer-bio" class="bio">Passionate Developer with a creative mindset. Enjoys turning complex problems into elegant solutions.</p>
+      </div>
+      <div class="team-member" onmouseover="showBio('Parth')" onmouseout="hideBio('Parth')">
+        <img src="parth.jpg" alt="Parth">
+        <h3>Parth</h3>
+        <p id="Parth-bio" class="bio">Innovative Designer who loves translating ideas into visually stunning and user-friendly designs.</p>
+      </div>
+      <div class="team-member" onmouseover="showBio('Partha Dey')" onmouseout="hideBio('Partha Dey')">
+        <img src="partha.jpg" alt="Partha Dey">
+        <h3>Partha Dey</h3>
+        <p id="Partha Dey-bio" class="bio">Designing Guru with a keen eye for trends. Excels in creating compelling and effective design strategies.</p>
+      </div>
+    </section>
+    <section id="mission">
+      <h2>Our Mission</h2>
+      <p>We strive to create a Music player (Musify) which is loved by all the users. In this project, we learn about some basic concepts and teamwork. We have completed this project with our full dedication.</p>
+    </section>
+  </div>
+
+
+  <footer>For further information contact: musify@gmail.com </footer>
+
+  <script src="about.js">
+   
+  </script>
+</body>
+</html>

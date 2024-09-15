@@ -1,0 +1,780 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+        .div1{
+            width: 70%;
+            height: 70px;
+          
+        }
+        .div2{
+            width: 30%;
+            justify-content: space-around;
+            border-top: 40px;
+            height: 70px;
+        }
+       
+       .btn.btn-danger{
+        border-radius: 20px;
+       }
+       .image{
+        height: 500px;
+        width: 100%;
+        background-repeat: no-repeat;
+        background-size: cover;
+        border-radius: 40px;
+        background-position: center;
+        background-image: url(https://c4.wallpaperflare.com/wallpaper/622/739/588/stranger-things-netflix-clouds-bicycle-wallpaper-preview.jpg);
+        animation-name: netflix;
+        animation-duration: 8s;
+        animation-timing-function: ease-in-out;
+        animation-iteration-count: infinite;
+       }
+       @keyframes netflix{
+        from{background-image: url(https://c4.wallpaperflare.com/wallpaper/622/739/588/stranger-things-netflix-clouds-bicycle-wallpaper-preview.jpg);
+       }
+        to{
+        background-image: url(https://cutewallpaper.org/28/cool-stranger-things-wallpaper/2355622907.jpg);
+       }
+    }
+       .container-fluid{
+        position: relative;
+        text-align: center;
+       }
+
+       .centered{
+        position: absolute;
+        top: 20px;
+        left: 400px;
+        color: aliceblue;
+        /* font-size: 100px; */
+        transform: translate(-0%,-0%);
+       }
+       .text{
+        text-align: center;
+        font-size: 40px;
+        margin-top: 0px;
+       }
+       .text2{
+        font-size: 29px;
+        margin-top: 70px;
+       }
+       a.nav-link{
+        color: antiquewhite;
+       }
+       .flex{
+        display: flex;
+        flex-direction: row;
+       }
+       .add{
+        height: 75px;
+        width: 520px;
+        border-radius: 30px;
+        font-size: 25px; 
+        color: rgb(189, 189, 209);
+        background-color: rgb(74, 60, 60);
+        border: 3px solid gray;
+        margin-left: 200px;
+        }
+       button.btn.btn-success{
+        height: 75px;
+        width: 190px;
+        font-size: 25px;
+        border-radius: 35px;
+        border: 3px solid gray;
+       }
+       button.btn.btn-success:hover{
+        background-color: rgb(164, 43, 164);
+        transition-duration: .2s;
+        width: 200px;
+        height: 90px;
+        border-radius: 40px;
+        font-size: 25px;
+
+       }
+
+       .text3{
+        width: 100%;
+       margin-right: 800px;
+       margin-top: 100px;
+       margin-left: 100px;
+       }
+      
+       .image3{
+       width: 100%;
+       height: 50px;
+       margin-right: 800px;
+       margin-top: 200px;
+       margin-left: 100px;
+       margin-bottom: 150px;
+       }
+       .unimg{
+        width: 350px;
+        height: 200px;
+      
+        /* background-image: url(https://www.cnet.com/a/img/resize/4ef58acde726def6bd34595506b60bb4bd86c9ca/hub/2021/04/22/decf3f44-6b03-4093-bcef-35d2892be761/004-how-to-watch-netflix-on-your-tv-2021.jpg?auto=webp&fit=crop&height=900&width=1200); */
+        
+        
+       }
+       .text3{
+        width: 100%;
+        margin-top: 150px;
+        margin-bottom: 150px;
+        margin-left: 400px;
+        /* margin-right: 100px; */
+
+       }
+       .image4{
+        position: relative;
+        width: 60%;
+        margin-top: 150px;
+        margin-bottom: 150px;
+        margin-left: 500px;
+       }
+       .uimg{
+        width: 350px;
+        height: 250px;
+       }
+       .text4{
+        position: absolute;
+        width: 40%;
+       /* margin-right: 800px; */
+       margin-top: 200px;
+       margin-left: 80px;
+       margin-bottom: 350px;
+
+       }
+       .img1{
+        background-image: url(https://img.freepik.com/free-vector/gradient-podcast-cover-template_23-2149449551.jpg);
+        height: 300px;
+        width: 250px;
+      
+       background-position: center;
+       background-size: cover;
+       border-radius: 50px;
+      
+      }
+      .img1:hover{
+        width: 250px;
+        height: 320px;
+        
+      }
+      .img2{
+        background-image: url(https://w0.peakpx.com/wallpaper/338/377/HD-wallpaper-arijit-singh-live-concert-arijit-singh-event-gallery.jpg);
+        height: 300px;
+        width: 250px;
+        background-position: center;
+       background-size: cover;
+       border-radius: 50px;
+       margin-left: 0px;
+      }
+      .img2:hover{
+        width: 250px;
+        height: 320px;
+        
+      }
+      .img3{
+        background-image: url(https://cms-fym.s3.nl-ams.scw.cloud/apple_music_web_player_58c27d168e.png);
+        height: 300px;
+        width: 250px;
+        background-position: center;
+       background-size: cover;
+       border-radius: 50px;
+       margin-left: 0px;
+      }
+      .img3:hover{
+        width: 250px;
+        height: 320px;
+        
+      }
+      .img4{
+        background-image: url(https://1.bp.blogspot.com/-AZmjy5u1uDY/Xf-JajDLgfI/AAAAAAAAQNY/HhyfRwhTG9cV1AyWVBW71I0prTP5KXmdACNcBGAsYHQ/s1600/Happy%2BHolidays.JPG);
+        height: 300px;
+        width: 250px;
+        background-position: center;
+       background-size: cover;
+       border-radius: 50px;
+       margin-left: 0px;
+      }
+      .img4:hover{
+        width: 250px;
+        height: 320px;
+        
+      }
+      .img5{
+        background-image: url(https://cdn.musebycl.io/2022-02/music-brands-5-trends-hed-2022.jpg);
+        height: 300px;
+        width: 250px;
+        background-position: center;
+       background-size: cover;
+       border-radius: 50px;
+       margin-left: 0px;
+      }
+      .img5:hover{
+        width: 250px;
+        height: 320px;
+        
+      }
+      .img6{
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTRL0wi12BqRIDpbpdTbTEg7CAxt3L7ETBwsg&usqp=CAU);
+        height: 300px;
+        width: 250px;
+        background-position: center;
+       background-size: cover;
+       border-radius: 50px;
+       margin-left: 00px;
+      }
+      .img6:hover{
+        width: 250px;
+        height: 320px;
+        
+      }.img7{
+        background-image: url(https://i.pinimg.com/736x/da/91/2b/da912ba24313ff13116c7e05960aa7dd.jpg);
+        height: 300px;
+        width: 250px;
+        background-position: center;
+       background-size: cover;
+       border-radius: 50px;
+       margin-left: 00px;
+      }
+      .img7:hover{
+        width: 250px;
+        height: 320px;
+        
+      }
+    
+      
+      .img9{
+        background-image: url(https://wallpapercave.com/wp/wp5510430.jpg);
+        height: 300px;
+        width: 250px;
+        background-position: center;
+       background-size: cover;
+       border-radius: 50px;
+       margin-bottom: 20px;
+       margin-left: 0px;
+      }
+      .img9:hover{
+        width: 250px;
+        height: 320px;
+        
+      }
+      .img8{
+        background-image: url(https://i.ytimg.com/vi/_2WAQmSt_W0/maxresdefault.jpg);
+        height: 300px;
+        width: 250px;
+        background-position: center;
+       background-size: cover;
+       border-radius: 50px;
+       margin-bottom: 20px;
+       margin-left: 0px;
+      }
+      .img8:hover{
+        width: 250px;
+        height: 320px;
+        
+      }
+      .img10{
+        background-image: url(https://cdn3.vectorstock.com/i/1000x1000/78/77/music-party-vector-267877.jpg);
+        height: 300px;
+        width: 250px;
+        background-position: center;
+       background-size: cover;
+       border-radius: 50px;
+       margin-bottom: 20px;
+       margin-left: 0px;
+      }
+      .img10:hover{
+        width: 250px;
+        height: 320px;
+        
+      }
+      .img11{
+        background-image: url(https://media.istockphoto.com/id/1330032278/photo/a-handcrafted-metal-artifact-made-by-rajasthani-women-at-a-cottage-industry-depicting-hindu.webp?b=1&s=170667a&w=0&k=20&c=xBkQBDJZCyGOljzFr0kqQna8vP-GHlT6Lo4zGyaDdX0=);
+        height: 300px;
+        width: 250px;
+        background-position: center;
+       background-size: cover;
+       border-radius: 50px;
+       margin-bottom: 20px;
+       margin-left: 0px;
+      }
+      .img11:hover{
+        width: 250px;
+        height: 320px;
+        
+      }
+      .img12{
+        background-image: url(https://i.scdn.co/image/ab67616d0000b2737a27b7b3cb6686359095c026);
+        height: 300px;
+        width: 250px;
+        background-position: center;
+       background-size: cover;
+       border-radius: 50px;
+       margin-bottom: 20px;
+       margin-left: 0px;
+      }
+      .img12:hover{
+        width: 250px;
+        height: 320px;
+        
+      }
+      .img13{
+        background-image: url(https://w0.peakpx.com/wallpaper/224/784/HD-wallpaper-fear-street-film-netflix.jpg);
+        height: 300px;
+        width: 250px;
+        background-position: center;
+       background-size: cover;
+       border-radius: 50px;
+       margin-bottom: 20px;
+       margin-left: 0px;
+      }
+      .img13:hover{
+        width: 250px;
+        height: 320px;
+        
+      }
+      .img14{
+        background-image: url(https://wallpapercave.com/wp/wp7151739.jpg);
+        height: 300px;
+        width: 250px;
+        background-position: center;
+       background-size: cover;
+       border-radius: 50px;
+       margin-bottom: 20px;
+       margin-left: 0px;
+      }
+      .img14:hover{
+        width: 250px;
+        height: 320px;
+        
+      }
+      .img15{
+        background-image: url(https://www.healingwavess.com/cdn/shop/files/sefytofan_woman_meditating_while_listening_to_music_in_a_mystic_0c885e25-5aed-4af4-922a-cabea57a7383.png?v=1687197001&width=1500);
+        height: 300px;
+        width: 250px;
+        background-position: center;
+       background-size: cover;
+       border-radius: 50px;
+       margin-bottom: 20px;
+       margin-left: 0px;
+      }
+      .img15:hover{
+        width: 250px;
+        height: 320px;
+        
+      }
+      .img16{
+        background-image: url(https://i.pinimg.com/736x/8d/f7/c2/8df7c26d12de325814b39e793200903f.jpg);
+        height: 300px;
+        width: 250px;
+        background-position: center;
+       background-size: cover;
+       border-radius: 50px;
+       margin-bottom: 20px;
+       margin-left: 0px;
+      }
+      .img16:hover{
+        width: 250px;
+        height: 320px;
+        
+      }
+      .img17{
+        background-image: url(https://i.etsystatic.com/25781705/r/il/f71b38/4205124703/il_570xN.4205124703_didj.jpg);
+        height: 300px;
+        width: 250px;
+        background-position: center;
+       background-size: cover;
+       border-radius: 50px;
+       margin-bottom: 20px;
+       margin-left: 0px;
+      }
+      .img17:hover{
+        width: 250px;
+        height: 320px;
+        
+      }
+      .img18{
+        background-image: url(https://i1.sndcdn.com/artworks-000049682084-eenlys-t500x500.jpg);
+        height: 300px;
+        width: 250px;
+        background-position: center;
+       background-size: cover;
+       border-radius: 50px;
+       margin-bottom: 20px;
+       margin-left: 0px;
+      }
+      .img18:hover{
+        width: 250px;
+        height: 320px;
+        
+      }
+      
+       b{
+        font-size: 40px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+       }
+       h1{
+        color: blue;
+        
+       }
+  
+       .icon{
+        margin-left: 1700px;
+        margin-bottom: 500px;
+       }
+      
+       body{
+        background-color: rgb(76, 38, 38);
+       }
+       #par{
+        background-image: url(https://www.cnet.com/a/img/resize/53019346ac4a4962cf676b1ace0dde45bec13b15/hub/2021/04/22/decf3f44-6b03-4093-bcef-35d2892be761/004-how-to-watch-netflix-on-your-tv-2021.jpg?auto=webp&fit=crop&height=675&width=1200);
+        height: 300px;
+        width: 200px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 50px;
+        margin: 30px;
+       }
+       #par:hover{
+        width: 250px;
+        height: 350px;
+       }
+       #tha{
+        margin-top: 150px;
+       }
+       big{
+        font-size: 50px;
+       }
+       #p{
+        background-image: url(https://s3.amazonaws.com/www-iotransfer-net/upload/blog/image/20180524/1527155102815437.png);
+        height: 300px;
+        width: 200px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 50px;
+        margin: 30px;
+       }
+       #p:hover{
+        width: 250px;
+        height: 350px;
+       }
+       #t{
+        margin-top: 150px;
+       }
+       big{
+        font-size: 50px;
+       }
+       .head{
+        text-align: center;
+        margin-right: 15px;
+        margin-top: 20px;
+       
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+       }
+       #pp{
+        background-image: url(https://i.pcmag.com/imagery/articles/05GMIBuBPyebBsdPhy32FGI-1..v1569489903.jpg);
+        height: 250px;
+        width: 200px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 50px;
+        margin: 30px;
+       }
+       #pp:hover{
+        width: 250px;
+        height: 350px;
+       }
+       #tt{
+        margin-top: 150px;
+       }
+       big{
+        font-size: 50px;
+       }
+       #pppp{
+        background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4xH5EWGRb5k_bKabtqMvgcW6L25OG33cZKQ&usqp=CAU);
+        height: 300px;
+        width: 200px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 50px;
+        margin: 30px;
+       }
+       #pppp:hover{
+        width: 250px;
+        height: 350px;
+       }
+       #tttt{
+        margin-top: 150px;
+       }
+       big{
+        font-size: 50px;
+        margin-bottom: 10px;
+       }
+       .row{
+        border-bottom: 10px solid gray;
+       }
+       .ppp{
+        border-bottom: 5px solid gray;
+       }
+       .te{
+        font-size: 25px;
+       }
+       .logo{
+        height: 150px;
+        width: 150px;
+        background-size: cover;
+       }
+       .btn.btn-success{
+        font-size: 40px;
+       }
+       .add{ 
+        margin-top: 170px;
+        margin-left: 350px;
+        width: 700px;
+
+       } 
+       /* .button{
+        margin-top: 220px;
+       } */
+       .btn.btn-success{
+        margin-top: 170px;
+        margin-left: 0px;
+       }
+       .text{
+        color: aliceblue;
+       }
+       .ppp{
+        margin-left: 30px;
+       }
+       .ppp:hover{
+        border: 2px solid red;
+        border-radius: 100px;
+        /* margin-left: 20px; */
+       }
+       .par:hover{
+      color: greenyellow;
+      text-decoration: underline;
+       }
+       .contain{
+        background-color: black;
+        color: wheat;
+       }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+</head>
+<body class="sm-3 bg-secondary">
+    <div class="container-fluid">
+           <nav class="navbar navbar-expand-sm bg-dark">
+            <div class="div1">
+                <ul class="navbar-nav">
+                  <li class="nav-items">
+                    <a>
+                      <img class="music1" src="https://imgs.search.brave.com/91ZFjB_2kDlZrQtQgWbMPa-NhGJS0gjaGI8lcTGk1VQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tdXNp/Yy5tdXNpZnkuaXQv/d3AtY29udGVudC91/cGxvYWRzLzIwMjEv/MDEvbG9nby1tdXNp/ZnktMTUwLnBuZw" alt="Logo" />
+                    </a>
+                  </li>
+                </ul>
+                </div>
+                <div class="div2">
+                  <ul class="navbar-nav">
+                    <li class="nav-items">
+                  <!-- <form>
+                    <select name="">
+                        <option value="">English</option>
+                        <option value="">Hindi</option>
+                    </form> 
+                    </li> -->
+                    <li class="nav-items">
+                        
+                        <a class="nav-link" href="musify.html">Home</a>
+                      </li>
+                      <li class="nav-items">
+                        
+                        <a class="nav-link" href="premium.html" style="margin-left: 2em;">Premium</a>
+                      </li>
+                      <li class="nav-items">
+                        
+                        <a class="nav-link" href="#" style="margin-left: 2em;">About</a>
+                      </li>
+                    <li class="nav-items">
+                      <div> <a href="loginform.html"><button type="submit" class="btn btn-danger" style="margin-left: 2em;">Sign in</button></a></div>
+                    </li>
+            </ul>
+        </div>
+    </nav>
+        </div>
+    
+    <div class="container-fluid">
+        <div class="image">
+        <!-- <img src="net1.jpg" class="net"> -->
+        <!-- <div class="centered"> -->
+         <!-- <h2 class="text">Musify</h2> -->
+            <!-- <p class="text2">Join today. Cancel anytime.</p>
+            <p class="text2">Ready to listen music? Enter your email to create or restart your membership.</p> --> -->
+            <div class="flex">
+            <input type="search" placeholder="Search music from Browser..." class="add"><button class="btn btn-success"><svg class="button" xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+              <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+            </svg>     Search</button>
+       </div>
+    </div>
+  </div></div>
+
+
+
+<div class="div1">
+  <pre><h1>  BROWSE ALL</h1> </pre>
+        <!-- <input type="search" class="search" placeholder="  Search music from browser"><button class="ss">Search</button>  -->
+
+  </div>
+  
+  <div class="row">
+  <div class="col-sm-2"> 
+    <!-- <h2 class="head">New Released</h2>
+  <div class="img9" ?style="margin-top: 20px;"></div> -->
+  </div>
+
+  <div class="col-sm-2">
+    <div>
+      
+      <h2 class="head">Podcast</h2>
+      <a href="https://pixabay.com/music/search/theme/podcast%20music/">
+    <div class="img1" style="margin-top: 20px;"></div></a>
+    
+  </div>
+  </div>
+  
+  <div class="col-sm-2">
+    <h2 class="head">Made For You</h2>
+    <a href="https://gaana.com/album/made-for-you-english-2019">
+    <div class="img3" style="margin-top: 20px;"></div></a>
+
+  </div>
+  <div class="col-sm-2">
+    <h2 class="head">Happy Holidays</h2>
+    <a href="https://www.jiosaavn.com/lyrics/happy-holiday-lyrics/EisgaBdDZUo">
+    <div class="img4" style="margin-top: 20px;"></div></a>
+  </div>
+  <div class="col-sm-2">
+    <h2 class="head">Trending</h2>
+    <a href="https://www.jiosaavn.com/featured/trending-today/I3kvhipIy73uCJW60TJk1Q__">
+    <div class="img5" style="margin-top: 20px;"></div></a>
+  </div>
+  <div class="col-sm-2">
+    <h2 class="head">Rock</h2>
+    <a href="https://ew.com/music/best-rock-songs/">
+    <div class="img6" style="margin-top: 20px;"></div></a>
+  </div>
+  <div class="col-sm-2">
+    <h2 class="head">Sleep</h2>
+    <a href="https://www.jiosaavn.com/album/sleep-music-80-sleeping-songs-soft-and-slow-relaxing-music-for-a-deep-sleep-good-night/JdTuLv42osM_">
+    <div class="img7" style="margin-top: 20px;"></div></a>
+  </div>
+  <div class="col-sm-2">
+    <h2 class="head">Romantic</h2>
+    <a href="https://wynk.in/music/playlist/100-greatest-romantic-hits-bollywood/bb_1522659831847">
+    <div class="img9" style="margin-top: 20px;"></div></a>
+  </div>
+  <div class="col-sm-2">
+    <h2 class="head">Gaming</h2>
+    <a href="https://pixabay.com/music/search/gaming/">
+    <div class="img8" style="margin-top: 20px;"></div></a>
+  </div>
+  <div class="col-sm-2">
+    <h2 class="head">Party</h2>
+    <a href="https://www.jiosaavn.com/featured/bollywood-party/E9wXPAoWgvowkg5tVhI3fw__">
+    <div class="img10" style="margin-top: 20px;"></div></a>
+  </div>
+  <div class="col-sm-2">
+    <h2 class="head">Indian Classical</h2>
+    <a href="https://open.spotify.com/playlist/37i9dQZF1DX3LrQBSMX6aK">
+    <div class="img11" style="margin-top: 20px;"></div></a>
+  </div>
+  <div class="col-sm-2">
+    <h2 class="head">Travel</h2>
+    <a href="https://www.holidify.com/pages/songs-journey-roadtrip-1476.html">
+    <div class="img12" style="margin-top: 20px;"></div></a>
+  </div>
+  <div class="col-sm-2">
+    <h2 class="head">Netflix</h2>
+    <div class="img13" style="margin-top: 20px;"></div>
+  </div>
+  <div class="col-sm-2">
+    <h2 class="head">Movie</h2>
+    <div class="img14" style="margin-top: 20px;"></div>
+  </div>
+  <div class="col-sm-2">
+    <h2 class="head">Wellness</h2>
+    <div class="img15" style="margin-top: 20px;"></div>
+  </div>
+  <div class="col-sm-2">
+    <h2 class="head">Kids & Family</h2>
+    <div class="img16" style="margin-top: 20px;"></div>
+  </div>
+  <div class="col-sm-2">
+    <h2 class="head">Disney</h2>
+    <div class="img17" style="margin-top: 20px;"></div>
+  </div>
+  <div class="col-sm-2">
+    <h2 class="head">Devotional</h2>
+    <div class="img18" style="margin-top: 20px;"></div>
+  </div>
+    <div>
+  </div>
+  </div>
+</div>
+<!-- <div class="search-container">
+  <i class="fas fa-search"></i>
+  <!-- <input type="text" id="searchInput" placeholder="Search..."> -->
+</div> -->
+
+</div>
+<div class="contain" style="margin-top: 3em;">
+  <center>        <div class="row">
+           <div class="col col-4">
+   <h5>COMPANY</h5>
+   <p class="par">About</p>
+   <p class="par">Jobs</p>
+   <p class="par">For The Record</p>
+           </div>
+           <div class="col col-4">
+               <h5>COMMUNITIES</h5>
+               <p class="par">For Artists</p>
+               <p class="par">Advertising</p>
+               <p class="par">Investors</p>
+               <p class="par">Vendors</p>
+                       </div>
+                       <div class="col col-4">
+                           <h5>USEFUL LINKS</h5>
+                           <p class="par">Support</p>
+                           <p class="par">Web Player</p>
+                           <p class="par">Free Mobile App</p>
+                                   </div>
+                               
+      
+                               </center> 
+       </div>
+       <center>
+           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="ppp" fill="currentColor" class="bi bi-twitter" style="color: #0894ff;" viewBox="0 0 16 16">
+               <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+             </svg>  
+           <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="ppp" fill="currentColor" style="color: #ac2b94;" style="margin: 1em 1em 1em 1em;" class="bi bi-instagram" viewBox="0 0 16 16">
+           <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+         </svg>
+        
+         <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" class="ppp" fill="currentColor" class="bi bi-facebook" style="color: #0082ca;" viewBox="0 0 16 16">
+           <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+         </svg>
+       
+       </center>
+  
+
+   </div><br>
+   <div><p>We andour partners use cookies to personalize your experience, to show you ads based on your interests,
+    <br> and for measurement and analytics purposes. By using our website and services, you agree to our use of cookies as described in ourCookie Policy.</p></div>
+   <div class="icons8-ad-blocker"></div>
+</body>
+</html>

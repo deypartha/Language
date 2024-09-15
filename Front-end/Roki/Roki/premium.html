@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button.btn.btn-primary{
+            width: 300px;
+            border: 3px solid rgb(254, 253, 253);
+            border-radius: 25px;
+            background-color: #e1e4ec;
+            font-size: 16px;
+            color: rgb(12, 12, 12);
+            /* animation-name: partha;
+            animation-duration: 1s;
+            animation-timing-function: ease-in-out; */
+        
+        }
+        button.btn.btn-primary:hover{
+            width: 350px;
+            font-size: 22px;
+            background-color: rgb(9, 8, 9);
+            color: beige;
+        }
+        .container-fluid{
+            margin-top: 70px;
+        }
+        h5{
+            color: rgb(223, 212, 212);
+            text-decoration: 3px underline red;
+        }
+        .py-3.text-center{
+            color: #b00c82;
+        }
+        p{
+            font-size: 18px; 
+            color: black;
+        }
+        /* div.container-fluid{
+            background-color: black;
+            color: antiquewhite;
+        } */
+        .image{
+            height: 200px;
+            width: 200px;
+            border-radius: 100px;
+        }
+       button.btn.btn-dark{
+        border-radius: 20px;
+        height: 50px;
+        width: 200px;
+       }
+       button.btn.btn-light1{
+        height: 50px;
+        width: 450px;
+        font-size: 18px;
+        color: rgb(0, 76, 255);
+
+       }
+       .col.col-3{
+        border: 2px solid black;
+        justify-content: space-between;
+        border-radius: 10px;
+       }
+       .col.col-3:hover{
+        border: 4px solid rgb(76, 76, 76);
+        border-radius: 10px;
+       }
+       .col.col-4{
+       justify-content: space-between;
+       }
+      .contain{
+        background-color: black;
+        
+        width: 100%;
+      }
+      /* .container{
+        background-color: blue;
+      } */
+      div.py-3.text-center{
+        background-color: #486948;
+      }
+      .par{
+        color: aliceblue;
+      }
+      .par:hover{
+        color: chartreuse;
+      }
+      h2{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+      }
+      .img2{
+        height: 200px;
+        width: 200px;
+      }
+     .img3{
+        height: 200px;
+        width: 200px;
+     }
+     .img5{
+        height: 200px;
+        width: 200px;
+     }
+    
+     .music1{
+        height: 43px;
+        width: 130px;
+        margin-top: 10px;
+        /* border-radius: 50px; */
+        /* border: 5px solid rgb(118, 44, 44); */
+     }
+     .text{
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     }
+     h1{
+        color: rgb(0, 0, 0);
+     }
+     h3{
+        color: black;
+     }
+     h2.py-3.text-center{
+        color: black;
+     }
+     .py-3.text-center{
+        color: black;
+     }
+     #id{
+        color: #b00c82;
+     }
+     .topbar {
+        display: flex;
+        justify-content: space-between;
+        background-color: #101010;
+        padding: 14px 30px;
+      }
+      .topbar .prev-next-buttons button {
+        color: #7a7a7a;
+        cursor:default;
+        width: 34px;
+        height: 34px;
+        border-radius: 100%;
+        font-size: 18px;
+        border: 0px;
+        background-color: #090909;
+        margin-right: 10px;
+      }
+      .topbar .prev-next-buttons .button .chevron-left{
+        color: #7a7a7a;
+      }
+      .topbar .prev-next-buttons .button .chevron-right{
+        color: #7a7a7a;
+      }
+      .topbar .prev-next-buttons .button:hover{
+        color: white;
+    
+      }
+      .topbar .prev-next-buttons .button:hover{
+        color: white;
+    
+      }
+      .topbar .navbar {
+        display: flex;
+        align-items: center;
+        
+      }
+      .topbar .navbar ul {
+        list-style: none;
+      }
+      .topbar .navbar ul li {
+        display: inline-block;
+        margin: 0px 8px;
+        width: 70px;
+      }
+      .topbar .navbar ul li a {
+        color: #b3b3b3;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 14px;
+        letter-spacing: 1px;
+        
+      }
+      .topbar .navbar ul li a:hover,
+      .topbar .navbar ul li a:active,
+      .topbar .navbar ul li a:focus {
+        color: rgb(80, 186, 72);
+        font-size: 15px;
+        /* text-decoration: underline; */
+      }
+      .topbar .navbar ul li.divider {
+        color: #ffffff;
+        font-size: 26px;
+        margin: 0px 20px;
+        width: auto;
+      }
+      .topbar .navbar button {
+        background-color: #ffffff;
+        color: #000000;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 14px 30px;
+        border: 0px;
+        border-radius: 40px;
+        cursor: pointer;
+        margin-left: 20px;
+      }
+      .topbar .navbar button:hover,
+      .topbar .navbar button:active,
+      .topbar .navbar button:focus {
+        background-color: #f2f2f2;
+      }
+     div.topbar{
+          position: fixed;
+          z-index: 1000;
+          width: 100%;
+          border-radius: 30px;
+        }
+        img.music1{
+         width: 150px;
+         height: 70px;
+         margin-left: 00px;
+    }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+</head>
+<body>
+    <div class="main-container">
+        <div class="topbar">
+          <div class="prev-next-buttons">
+            <button type="button" class="chevron-left">-</button>
+            <button type="button" class="chevron-right">+</button>
+          </div>
+  
+          <div class="navbar">
+            <ul>
+            <li>
+                
+            </li>
+              <li>
+                <a href="premium.html">Premium</a>
+              </li>
+              <li>
+                <a href="pppppppp.html">Support</a>
+              </li>
+              <li>
+                <a >Download</a>
+              </li>
+              <li class="divider">|</li>
+              <li>
+                <a href="sign up.html">Sign Up</a>
+              </li>
+            </ul>
+            <button type="button"><a href="loginform.html" class="logg">Log In</a></button>
+          </div>
+        </div>
+        <br>
+    <div class="container-fluid">
+        <!-- <div class="jumbotron"> -->
+            <div class="py-3 text-center">
+              <a>
+                <img class="music1" src="https://imgs.search.brave.com/91ZFjB_2kDlZrQtQgWbMPa-NhGJS0gjaGI8lcTGk1VQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tdXNp/Yy5tdXNpZnkuaXQv/d3AtY29udGVudC91/cGxvYWRzLzIwMjEv/MDEvbG9nby1tdXNp/ZnktMTUwLnBuZw" alt="Logo" />
+             </a>
+                <!-- <center><img class="music1" src="https://imgs.search.brave.com/91ZFjB_2kDlZrQtQgWbMPa-NhGJS0gjaGI8lcTGk1VQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tdXNp/Yy5tdXNpZnkuaXQv/d3AtY29udGVudC91/cGxvYWRzLzIwMjEv/MDEvbG9nby1tdXNp/ZnktMTUwLnBuZw" alt="Logo" /></center> -->
+                <h1 class="text">Premium pack</h1>
+            </div>
+            <div class="py-3 text-center">
+                <h3>Try Premium Free for 1 month</h3>
+                <button class="btn btn-primary">Get started</button><br><button class="btn btn-primary" style="margin-top: 1em;">See other plans</button>
+                <p>from $119/month after. Offer only for users who are new to premium.</p><p>Terms and Conditions apply.</p>
+            </div>
+            <div class="container">
+            <div>
+                <h1 class="py-3 text-center" id="id">The power of Premium</h1>
+
+    </div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col col-3.2">
+                <!-- <img src="ad.jpg" class="image"> -->
+                <img src="s1.jpg" alt="">
+                <h2>Ad-free music listening</h2>
+                <p>Enjoy uninterrupted music.</p>
+            </div>
+            <div class="col col-3.2">
+                <img src="s3.jpg" class="img2" alt="">
+                <h2>Offline playback</h2>
+                <p>Save your data by listening offline.</p>
+            </div>
+            <div class="col col-3.2">
+                <img src="s4.jpg" class="img3" alt="">
+                <h2>Play everywhere</h2>
+                <p>Listen on your speakers, TV, and other favorite devices.</p>
+            </div>
+            <div class="col col-3.2">
+                <img src="s5.jpg" class="img5" alt="">
+                <h2>Pay your way</h2>
+                <p>Prepay with Paytm, UPI, and more</p>
+
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="jumbotron">
+            <h2 class="py-3 text-center">Pick Your Premium</h2>
+            <p class="py-3 text-center">Listen without limits on your phone, speaker, and other devices.</p>
+            <center><svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 256 83"><defs><linearGradient id="logosVisa0" x1="45.974%" x2="54.877%" y1="-2.006%" y2="100%"><stop offset="0%" stop-color="#222357"/><stop offset="100%" stop-color="#254AA5"/></linearGradient></defs><path fill="url(#logosVisa0)" d="M132.397 56.24c-.146-11.516 10.263-17.942 18.104-21.763c8.056-3.92 10.762-6.434 10.73-9.94c-.06-5.365-6.426-7.733-12.383-7.825c-10.393-.161-16.436 2.806-21.24 5.05l-3.744-17.519c4.82-2.221 13.745-4.158 23-4.243c21.725 0 35.938 10.724 36.015 27.351c.085 21.102-29.188 22.27-28.988 31.702c.069 2.86 2.798 5.912 8.778 6.688c2.96.392 11.131.692 20.395-3.574l3.636 16.95c-4.982 1.814-11.385 3.551-19.357 3.551c-20.448 0-34.83-10.87-34.946-26.428m89.241 24.968c-3.967 0-7.31-2.314-8.802-5.865L181.803 1.245h21.709l4.32 11.939h26.528l2.506-11.939H256l-16.697 79.963h-17.665m3.037-21.601l6.265-30.027h-17.158l10.893 30.027m-118.599 21.6L88.964 1.246h20.687l17.104 79.963h-20.679m-30.603 0L53.941 26.782l-8.71 46.277c-1.022 5.166-5.058 8.149-9.54 8.149H.493L0 78.886c7.226-1.568 15.436-4.097 20.41-6.803c3.044-1.653 3.912-3.098 4.912-7.026L41.819 1.245H63.68l33.516 79.963H75.473" transform="matrix(1 0 0 -1 0 82.668)"/></svg>
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
+                    <path fill="#1976D2" d="M45,35c0,2.209-1.791,4-4,4H7c-2.209,0-4-1.791-4-4V13c0-2.209,1.791-4,4-4h34c2.209,0,4,1.791,4,4V35z"></path><path fill="#FFF" d="M22.255 20l-2.113 4.683L18.039 20h-2.695v6.726L12.341 20h-2.274L7 26.981h1.815l.671-1.558h3.432l.682 1.558h3.465v-5.185l2.299 5.185h1.563l2.351-5.095v5.095H25V20H22.255zM10.135 23.915l1.026-2.44 1.066 2.44H10.135zM37.883 23.413L41 20.018h-2.217l-1.994 2.164L34.86 20H28v6.982h6.635l2.092-2.311L38.767 27h2.21L37.883 23.413zM33.728 25.516h-4.011v-1.381h3.838v-1.323h-3.838v-1.308l4.234.012 1.693 1.897L33.728 25.516z"></path>
+                    </svg>
+                <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
+                    <path fill="#0d47a1" d="M5.446 18.01H.548c-.277 0-.502.167-.503.502L0 30.519c-.001.3.196.45.465.45.735 0 1.335 0 2.07 0C2.79 30.969 3 30.844 3 30.594 3 29.483 3 28.111 3 27l2.126.009c1.399-.092 2.335-.742 2.725-2.052.117-.393.14-.733.14-1.137l.11-2.862C7.999 18.946 6.949 18.181 5.446 18.01zM4.995 23.465C4.995 23.759 4.754 24 4.461 24H3v-3h1.461c.293 0 .534.24.534.535V23.465zM13.938 18h-3.423c-.26 0-.483.08-.483.351 0 .706 0 1.495 0 2.201C10.06 20.846 10.263 21 10.552 21h2.855c.594 0 .532.972 0 1H11.84C10.101 22 9 23.562 9 25.137c0 .42.005 1.406 0 1.863-.008.651-.014 1.311.112 1.899C9.336 29.939 10.235 31 11.597 31h4.228c.541 0 1.173-.474 1.173-1.101v-8.274C17.026 19.443 15.942 18.117 13.938 18zM14 27.55c0 .248-.202.45-.448.45h-1.105C12.201 28 12 27.798 12 27.55v-2.101C12 25.202 12.201 25 12.447 25h1.105C13.798 25 14 25.202 14 25.449V27.55zM18 18.594v5.608c.124 1.6 1.608 2.798 3.171 2.798h1.414c.597 0 .561.969 0 .969H19.49c-.339 0-.462.177-.462.476v2.152c0 .226.183.396.422.396h2.959c2.416 0 3.592-1.159 3.591-3.757v-8.84c0-.276-.175-.383-.342-.383h-2.302c-.224 0-.355.243-.355.422v5.218c0 .199-.111.316-.29.316H21.41c-.264 0-.409-.143-.409-.396v-5.058C21 18.218 20.88 18 20.552 18c-.778 0-1.442 0-2.22 0C18.067 18 18 18.263 18 18.594L18 18.594z"></path><path fill="#00adee" d="M27.038 20.569v-2.138c0-.237.194-.431.43-.431H28c1.368-.285 1.851-.62 2.688-1.522.514-.557.966-.704 1.298-.113L32 18h1.569C33.807 18 34 18.194 34 18.431v2.138C34 20.805 33.806 21 33.569 21H32v9.569C32 30.807 31.806 31 31.57 31h-2.14C29.193 31 29 30.807 29 30.569V21h-1.531C27.234 21 27.038 20.806 27.038 20.569L27.038 20.569zM42.991 30.465c0 .294-.244.535-.539.535h-1.91c-.297 0-.54-.241-.54-.535v-6.623-1.871c0-1.284-2.002-1.284-2.002 0v8.494C38 30.759 37.758 31 37.461 31H35.54C35.243 31 35 30.759 35 30.465V18.537C35 18.241 35.243 18 35.54 18h1.976c.297 0 .539.241.539.537v.292c1.32-1.266 3.302-.973 4.416.228 2.097-2.405 5.69-.262 5.523 2.375 0 2.916-.026 6.093-.026 9.033 0 .294-.244.535-.538.535h-1.891C45.242 31 45 30.759 45 30.465c0-2.786 0-5.701 0-8.44 0-1.307-2-1.37-2 0v8.44H42.991z"></path>
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
+                        <path fill="#4527a0" d="M42,37c0,2.762-2.238,5-5,5H11c-2.761,0-5-2.238-5-5V11c0-2.762,2.239-5,5-5h26c2.762,0,5,2.238,5,5	V37z"></path><path fill="#fff" d="M32.267,20.171c0-0.681-0.584-1.264-1.264-1.264h-2.334l-5.35-6.25	c-0.486-0.584-1.264-0.778-2.043-0.584l-1.848,0.584c-0.292,0.097-0.389,0.486-0.195,0.681l5.836,5.666h-8.851	c-0.292,0-0.486,0.195-0.486,0.486v0.973c0,0.681,0.584,1.506,1.264,1.506h1.972v4.305c0,3.502,1.611,5.544,4.723,5.544	c0.973,0,1.378-0.097,2.35-0.486v3.112c0,0.875,0.681,1.556,1.556,1.556h0.786c0.292,0,0.584-0.292,0.584-0.584V21.969h2.812	c0.292,0,0.486-0.195,0.486-0.486V20.171z M26.043,28.413c-0.584,0.292-1.362,0.389-1.945,0.389c-1.556,0-2.097-0.778-2.097-2.529	v-4.305h4.043V28.413z"></path>
+                        </svg>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="50" height="50" viewBox="0 0 48 48">
+                            <path fill="#ff9800" d="M32 10A14 14 0 1 0 32 38A14 14 0 1 0 32 10Z"></path><path fill="#d50000" d="M16 10A14 14 0 1 0 16 38A14 14 0 1 0 16 10Z"></path><path fill="#ff3d00" d="M18,24c0,4.755,2.376,8.95,6,11.48c3.624-2.53,6-6.725,6-11.48s-2.376-8.95-6-11.48 C20.376,15.05,18,19.245,18,24z"></path>
+                            </svg>
+                           
+            </center> 
+                <div class="row">
+                <div class="col col-3" style="margin: 2.3em 2.3em 2.3em 2.3em;">
+                    <button class="btn btn-light">One-time plans available</button>
+                    <h2>Mini</h2>
+                    <p>From ₹7/day
+                    1 account on mobile only</p>
+                    <br><br>
+                    ------------------------------------
+                    <p><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="22" height="22" viewBox="0 0 48 48">
+                        <polyline fill="none" stroke="#42a047" stroke-miterlimit="10" stroke-width="4" points="6,27.5 17,38.5 42,13.5"></polyline>
+                        </svg>Ad-free music listening on mobile</p>
+                        <p><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="22" height="22" viewBox="0 0 48 48">
+                            <polyline fill="none" stroke="#42a047" stroke-miterlimit="10" stroke-width="4" points="6,27.5 17,38.5 42,13.5"></polyline>
+                            </svg>Group Session</p>
+                            <p><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="22" height="22" viewBox="0 0 48 48">
+                                <polyline fill="none" stroke="#42a047" stroke-miterlimit="10" stroke-width="4" points="6,27.5 17,38.5 42,13.5"></polyline>
+                                </svg>Download 30 songs on 1 mobile device</p>
+                                <button class="btn btn-dark">View Plans</button>
+                                <p>Terms and conditionations apply.</p>
+                    </div>
+                    <div class="col col-3" style="margin: 2.3em 2.3em 2.3em 2.3em;">
+                        <button class=" btn btn-light">One-time plans available</button>
+                        <button class="btn btn-success">1 month free</button>
+                        <h2>Individual</h2>
+                        <p>₹119/month after offer period
+
+                           1 account</p>
+                        ------------------------------------
+                        <p><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="22" height="22" viewBox="0 0 48 48">
+                            <polyline fill="none" stroke="#42a047" stroke-miterlimit="10" stroke-width="4" points="6,27.5 17,38.5 42,13.5"></polyline>
+                            </svg>Ad-free music listening on mobile</p>
+                            <p><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="22" height="22" viewBox="0 0 48 48">
+                                <polyline fill="none" stroke="#42a047" stroke-miterlimit="10" stroke-width="4" points="6,27.5 17,38.5 42,13.5"></polyline>
+                                </svg>Group Session</p>
+                                <p><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="22" height="22" viewBox="0 0 48 48">
+                                    <polyline fill="none" stroke="#42a047" stroke-miterlimit="10" stroke-width="4" points="6,27.5 17,38.5 42,13.5"></polyline>
+                                    </svg>Download 10k songs/device on 5 device</p>
+                                    <button class="btn btn-dark">View Plans</button>
+                                    <p>Terms and conditionations apply.</p>
+                        </div>
+                                            <div class="col col-3"style="margin: 2.3em 2.3em 2.3em 2.3em;">
+                                            <button class="btn btn-light">One-time plans available</button>
+                                            <h2>Family</h2>
+                                        <p>From ₹179/day upto
+                                        7 account on mobile only</p>
+                                            <br><br>
+                                            ------------------------------------
+                                        <p><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="22" height="22" viewBox="0 0 48 48">
+                                        <polyline fill="none" stroke="#42a047" stroke-miterlimit="10" stroke-width="4" points="6,27.5 17,38.5 42,13.5"></polyline>
+                                         </svg>Ad-free music listening on mobile</p>
+                                 <p><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="22" height="22" viewBox="0 0 48 48">
+                                     <polyline fill="none" stroke="#42a047" stroke-miterlimit="10" stroke-width="4" points="6,27.5 17,38.5 42,13.5"></polyline>
+                                     </svg>Group Session</p>
+                                <p><svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="22" height="22" viewBox="0 0 48 48">
+                                <polyline fill="none" stroke="#42a047" stroke-miterlimit="10" stroke-width="4" points="6,27.5 17,38.5 42,13.5"></polyline>
+                                </svg>Download 30 songs on 1 mobile device</p>
+                                    <button class="btn btn-dark">View Plans</button>
+                                    <p>Terms and conditionations apply.</p>
+                                    </div>
+                                    </div>
+
+
+        </div></div></div>
+
+                                    <center>
+<div class="container1" style="margin-top: 2em;">
+    <!-- <div class="jumbotron"></div> -->
+    <button class="btn btn-light1">Special discount for eligible students in university.       <button class="btn btn-dark">Learn More</button></button>
+    </div></center>
+<div class="contain" style="margin-top: 3em;">
+   <center>        <div class="row">
+            <div class="col col-4">
+    <h5>COMPANY</h5>
+    <p class="par">About</p>
+    <p class="par">Jobs</p>
+    <p class="par">For The Record</p>
+            </div>
+            <div class="col col-4">
+                <h5>COMMUNITIES</h5>
+                <p class="par">For Artists</p>
+                <p class="par">Advertising</p>
+                <p class="par">Investors</p>
+                <p class="par">Vendors</p>
+                        </div>
+                        <div class="col col-4">
+                            <h5>USEFUL LINKS</h5>
+                            <p class="par">Support</p>
+                            <p class="par">Web Player</p>
+                            <p class="par">Free Mobile App</p>
+                                    </div>
+                                
+       
+                                </center> 
+        </div>
+        <center>
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-twitter" style="color: #0894ff;" viewBox="0 0 16 16">
+                <path d="M5.026 15c6.038 0 9.341-5.003 9.341-9.334 0-.14 0-.282-.006-.422A6.685 6.685 0 0 0 16 3.542a6.658 6.658 0 0 1-1.889.518 3.301 3.301 0 0 0 1.447-1.817 6.533 6.533 0 0 1-2.087.793A3.286 3.286 0 0 0 7.875 6.03a9.325 9.325 0 0 1-6.767-3.429 3.289 3.289 0 0 0 1.018 4.382A3.323 3.323 0 0 1 .64 6.575v.045a3.288 3.288 0 0 0 2.632 3.218 3.203 3.203 0 0 1-.865.115 3.23 3.23 0 0 1-.614-.057 3.283 3.283 0 0 0 3.067 2.277A6.588 6.588 0 0 1 .78 13.58a6.32 6.32 0 0 1-.78-.045A9.344 9.344 0 0 0 5.026 15z"/>
+              </svg>  
+            <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" style="color: #ac2b94;" style="margin: 1em 1em 1em 1em;" class="bi bi-instagram" viewBox="0 0 16 16">
+            <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.917 3.917 0 0 0-1.417.923A3.927 3.927 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.916 3.916 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.926 3.926 0 0 0-.923-1.417A3.911 3.911 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0h.003zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599.28.28.453.546.598.92.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.47 2.47 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.478 2.478 0 0 1-.92-.598 2.48 2.48 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233 0-2.136.008-2.388.046-3.231.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92.28-.28.546-.453.92-.598.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045v.002zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92zm-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217zm0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334z"/>
+          </svg>
+         
+          <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-facebook" style="color: #0082ca;" viewBox="0 0 16 16">
+            <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951z"/>
+          </svg>
+        
+        </center>
+   
+
+    </div><br>
+    <div><p>We andour partners use cookies to personalize your experience, to show you ads based on your interests, and for measurement and analytics purposes. By using our website and services, you agree to our use of cookies as described in ourCookie Policy.</p></div>
+    <div class="icons8-ad-blocker"></div>
+</body>
+</html>

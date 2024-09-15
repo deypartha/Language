@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-image: url(https://media.istockphoto.com/id/1315768127/photo/abstract-black-background-empty-black-gradient-room-studio-background-abstract-backgrounds.webp?b=1&s=170667a&w=0&k=20&c=rrYOb0pJGGjAIu22xkfIfgRZC11jRi39s_AmBMgAah4=);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+        .login{
+            display: flex;
+            justify-content: center;
+            flex-direction: column;
+            height: 100%;
+            width: 100%;
+            margin-top: 30px;
+            align-items: center;
+            margin-top: 100px;
+            color: rgb(250, 251, 247);
+            line-height: 30px;
+          
+            /* background-color: aqua; */
+            
+            /* background-position: center; */
+             /* background-size: cover; */
+            /* background-repeat: no-repeat; */
+            /* background-size: auto; */
+        }
+        
+        button{
+            width: 150px;
+            height: 50px;
+            border-radius: 25px;
+            border: 2px solid #009688;
+            /* background-color: 2px ; */
+            /* font-family: Arial, Helvetica, sans-serif; */
+            font-size: 20px;
+            padding: 15px 0;
+            font-weight: bold;
+            background: transparent;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+            margin: 20px 10px;
+            color: bisque;
+            
+        }
+        span{ 
+            background: #009688;
+            height: 100%;
+            width: 0;
+            border-radius: 25px;
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            z-index: -1;
+            transition: 0.5s;
+
+
+        }
+        button:hover span{ 
+            width: 100%;
+
+        }
+        button:hover{ 
+            border: none;
+        }
+        .image{
+            height: 20px;
+            width: 20px;
+            border-radius: 5px;
+        }
+        .logo{
+            height: 20px;
+            width: 20px;
+            border-radius: 5px;
+        }
+        .user{
+            height: 30px;
+            width: 200px;
+            border-radius: 5px;
+            /* background-color: rgb(118, 118, 163); */
+            opacity: tranf;
+        }
+        .username{
+            font-size: 25px;
+            
+        }
+        .img{
+            height: 150px;
+            width: 150px;
+            border-radius: 200px;
+        }
+        .forgot{
+            color: rgb(85, 85, 249);
+            text-decoration: none;
+            font-size: 20px;
+        }
+        
+        .forgot:hover{
+            color: brown;
+        }
+        h2{
+            text-decoration: underline;
+            font-size: 35px;
+            font-style: italic;
+            /* line-height: 20px; */
+            color: rgb(121, 188, 168);
+        }
+
+        /* .log{ */
+            /* font-size: 35; */
+        /* } */
+        .user{
+            background-color: rgb(193, 204, 140);
+        }
+        /* .div{ */
+            /* margin: ; */
+        /* } */
+        
+        .password{
+            font-size: 25px;
+        }
+        .user{
+            font-size: 17px;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="login">
+        <h2>Sign in</h2>
+        <br>
+        <img class="img" src="https://png.pngtree.com/png-vector/20191009/ourmid/pngtree-user-icon-png-image_1796659.jpg">
+        <br>
+        <div class="username">
+            <img class="image" src="https://png.pngtree.com/png-vector/20191009/ourmid/pngtree-user-icon-png-image_1796659.jpg"> Username: <input class="user" type="gmail id" placeholder="Enter your gmail address">
+        </div>
+        <br>
+        <div class="password">
+            <img class="logo" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAAdVBMVEX///8AAAAeHh6np6dLS0v4+PgtLS2srKw9PT3y8vJkZGT19fVwcHDCwsLl5eVSUlKysrJ4eHjt7e2Tk5NWVlbIyMiAgIDOzs5qamo3NzecnJzc3NyNjY3d3d3U1NRdXV0hISFFRUUVFRW5ubkyMjIRERGEhIR/L8mqAAAE8UlEQVR4nO2daXvaOhBGY8CEHRwgLHFYAuH//8RCC+lTS7alscczou/52ovunNjWrtHLCwAAAAAAAAAAAAAAT8Vk3F7vp5sri/3763giHU+tDFfzXmSw2H7E0pHVQv+0N+3utJKVdHiV2Y2+cv1+c07fpGOswm5arPeHJFjHj46LX7iOw4ur3422dLj+zL59BKOo9yEdsR/xyM8vuMf4ufEXjKL1UDpuZ8YUvyubUDo6M6LglTAUt3TBKNpJR+9Au4pgCIqnaoL6X9RVVcEo6ks7FDIpDr47ne73086h8D/qSUsUcswPfD/fTe4NXn+yTAv6rBdZh0Lec5/LzGjNJ/PccdVYInYn8lr6RU4FOevm/EDrpxjbA+4u83+S07Ssmwvai7k12rTwN/2F9Uc6Jzfs9WhprNYu0KaJgL2xDZhaDoN369c744/XG9sj3DjNTth6CRofouURfjlOvywtiifeaAnYHqHz/JKlM3vgC5WIpSL1aLgts1bqBhnmtP27z8/NaY+EK1IiOyPCltesy4f5ELlCJWL2SD2rCrMAZb3TczY+3zHQm/LX1IzPu7ZPqv6NeHmt/hV9GkWoms8wmvu5fxnHbBmqem7GYJbw9zdGUl7NDTfZ4LqE9WujVzSoP04yRnCkP3+2kIOiZX5jAPRKKcWoTRWt1BgrFaROpTEWVlSZGpUEKTZjhKGo850dWLgODP/F6Nsq6rdlBz8H0hdktPmKRsHZBv9MqgX7WUNSfcXDIBMarUsJQ0lg6AYMJYGhGzCUBIZuwFASGLoBQ0lg6IZCw/iOaRhTMBY/2o//g4TccJxMj907Z2NffpdEtpTW4x82x2na7BabsdNZmLoZfTbltztK+N1ImplB9ToLUzcNTL/F9o1ojUFYtvMUbMkK8i9+55+WbIwtq2AqrXejYL9qZcy1dgkOjIbCtcwDvve0hsMU9cC2D5xwqJAHtl0a0mI/cO1hUPOSsu3qq3Tsrl6YBhpraa+/MH2IStqKG0ynop0TCPADQxjCUB4YwhCG8sAQhjCUB4YwhKE8MIQhDOWBIQxhKA8M5Qw7SZKMLJmvn8Qw3d234MWnqmutGg3PmeOS1ZbqFBqaIfVz09eFaNiypkGukCZTm+Ex59CsJSlNmIb5CRbMvD1hGhZsCqWmHNZlWLgllNhsqDLsFJY5fALDksQItHZRk+G0pFDaQ9RkWBpL9qxGcIalu+tJ1akiw25pqSXpo9UblufLjY1Ub2EZOmznpZy/UWTocPyMsl0Ohg0aPv9bOiotNfSa5lxaauitRXmLTxrpazIsrWpIe6s1GS5KCg2/5/38o6eShxiTytRlWJw5jzhpqsuwKDU7dcpUmWF+hgXyhKkyw9xPcVJyg2c4htHB2u7brkQI1dA2aRrbL20J1jDqZI6bzYqvtQrQ8FrhbH/e1VVayU+r4ZXvfZqmlxpWy9Ua1gYMYQhDeWAIQxjKA0MYwlAeGMIQhvLAEIYwlAeGMIShPDAkIpLE2w6TIWm/Mg9MGferLPjVDFNmyAprtnXDI/gfZGjV8yGyXXyh5jVly5SspUVkzK1PPi9YK9+cd5aI3vzwgPcGCAX9Gub7H4bkjVp1UX4KpyL9o6zghVvwxXJBeJMwdbkzLGtIbEFjYD3Xz8HpKOG3b/Qm8v5scG41SC85ke76BgAAAAAAAAAAAACgMX4BVaNr9y7PEKIAAAAASUVORK5CYII="> Password: <input  class="user" type="password" placeholder="password">
+        </div>
+        <br>   
+            <div>
+                <a class="forgot" href="forgot.html">Forgot Password</a>
+               
+            </div>
+            <br>
+                <div class="div">
+                  <a href="success.html"><button type="button"><span></span>Login</button></a>
+                </div>
+    </div>                                                                                                                          
+</body>
+</html>

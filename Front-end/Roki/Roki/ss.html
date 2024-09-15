@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Music Search</title>
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.container {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+.search-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    font-size: 16px;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* #resultsContainer { */
+    /* Add styles for displaying search results */
+/* } */
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Music Search</h1>
+        <div class="search-container">
+            <input type="text" id="searchInput" placeholder="Search for music...">
+            <button onclick="searchMusic()">Search</button>
+        </div>
+        <div id="resultsContainer"></div>
+    </div>
+
+    <script src="script.js">
+        function searchMusic() {
+    const searchInput = document.getElementById('searchInput').value;
+
+    // You can replace this with the actual API endpoint for music search
+    const apiUrl = `https://api.example.com/music?q=${searchInput}`;
+
+    // Make a fetch request to the music API
+    fetch(apiUrl)
+        .then(response => response.json())
+        .then(data => displayResults(data))
+        .catch(error => console.error('Error:', error));
+}
+
+function displayResults(results) {
+    const resultsContainer = document.getElementById('resultsContainer');
+    resultsContainer.innerHTML = '';
+
+    if (results.length === 0) {
+        resultsContainer.innerHTML = '<p>No results found.</p>';
+        return;
+    }
+
+    results.forEach(result => {
+        // Customize this based on the structure of your API response
+        const resultItem = document.createElement('div');
+        resultItem.innerHTML = `<p>${result.title}</p>`;
+        resultsContainer.appendChild(resultItem);
+    });
+}
+
+    </script>
+</body>
+</html>

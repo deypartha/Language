@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support Page - Musify Style</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #000;
+            color: #fff;
+        }
+
+        header {
+            background-color: #1DB954;
+            padding: 1em 0;
+            text-align: center;
+            color: #fff;
+            font-size: 27px;
+            font-weight: bold;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: 2em;
+        }
+
+        main {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #121212;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+            border-radius: 10px;
+        }
+
+        form {
+            display: grid;
+            gap: 20px;
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        input,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            box-sizing: border-box;
+            border: 1px solid #333;
+            border-radius: 5px;
+            background-color: #333;
+            color: #fff;
+            margin-top: 5px;
+        }
+
+        button {
+            background-color: #1DB954;
+            color: white;
+            padding: 15px 20px;
+            font-size: 1.2em;
+            border: dotted;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.6s ease;
+        }
+
+        button:hover {
+            background-color: #a34b25;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 1em;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    Contact Us
+</header>
+
+<main>
+    <center><img class="music1" src="https://imgs.search.brave.com/91ZFjB_2kDlZrQtQgWbMPa-NhGJS0gjaGI8lcTGk1VQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tdXNp/Yy5tdXNpZnkuaXQv/d3AtY29udGVudC91/cGxvYWRzLzIwMjEv/MDEvbG9nby1tdXNp/ZnktMTUwLnBuZw" alt="Logo" /></center>
+                
+
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="phone number">Phone Number:</label>
+        <input type="phone number" id="Phone number" name="Phone Number" required>
+        
+        <label for="message">Comments:</label>
+        <textarea id="message" name="message" rows="4" required></textarea>
+
+        <button type="submit">Submit</button>
+    </form>
+</main>
+
+<footer>
+    &copy; 2023 Musify Support
+</footer>
+
+</body>
+</html>

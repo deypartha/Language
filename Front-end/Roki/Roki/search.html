@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search</title>
+    <style>
+    
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+        *{
+            font-family: 'Poppins', sans-serif;
+        }
+        .jumbotron{
+            height: 700px;
+            width: 1100px;
+        }
+        html{
+            height: 100vh;
+            background-color: rgb(0, 68, 255);
+        }
+        .search{
+            height: 50px;
+            width: 900px;
+            border-radius: 25px;
+            font-size: 25px;
+            font-style: italic;
+        }
+        .music1{
+            height: 150px;
+            width: 200px;
+            /* border-radius: 10px; */
+            margin-top: 180px;
+
+        }
+        body{
+            background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20200714/pngtree-modern-double-color-futuristic-neon-background-image_351866.jpg);
+            height: 100%;
+            width: 100%;
+            margin-top: 00px;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+        p.py-3.text-center{
+            font-size: 33px;
+            color: blue;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+       
+        button.btn.btn-primary{
+            height: 50px;
+            width: 120px;
+            border-radius: 25px;
+            font-size: 19px;
+        }
+    .animate{ 
+        -webkit-animation: animatezoom 0.6s;
+        animation: animatezoom 0.6s
+         }
+        @-webkit-keyframes animatezoom { 
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+    .bi.bi-search{
+        margin-right: 30px;
+    }
+    </style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://unicons.iconscout.com/release/v4.0.0/css/line.css">
+</head>
+<body class="glow">
+    <div class="container">
+        <div class="animate" style="margin-top: 10px;">
+            <div> <div class="logo">
+                <a>
+                  <center><img class="music1" src="https://imgs.search.brave.com/91ZFjB_2kDlZrQtQgWbMPa-NhGJS0gjaGI8lcTGk1VQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tdXNp/Yy5tdXNpZnkuaXQv/d3AtY29udGVudC91/cGxvYWRzLzIwMjEv/MDEvbG9nby1tdXNp/ZnktMTUwLnBuZw" alt="Logo" /></center>
+                  <!-- <p class="py-3 text-center">Musify</p> -->
+                </a>
+              </div></div>
+           
+              <center>    <svg xmlns="http://www.w3.org/2000/svg" width="40px" height="60px" fill="currentColor" style="color: aliceblue;" class="bi bi-search" viewBox="0 0 16 16">
+            <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+          </svg><input type="search" placeholder="Search music" class="search" style="margin-top: 5em;">    <button class="btn btn-primary" style="margin-bottom: 1.1em;">Search</button>
+        </center>
+        </div>
+    </div>
+</body>
+</html>
+
+
+
+
+

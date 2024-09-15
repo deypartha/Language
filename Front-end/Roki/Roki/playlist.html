@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Simple Music Player</title>
+    <style>
+    body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f1f1;
+    margin: 0;
+    padding: 0;
+}
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    background-color: #3f2020;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    text-align: center;
+    color: blue;
+}
+#audioPlayer{
+    height: 50px;
+    width: 100%;
+    border: 5px solid rgb(28, 157, 169);
+    border-radius: 30px;
+   
+    /* background: linear-gradient(to right, #ae2896, #509bf5); */
+}
+audio {
+    width: 100%;
+    margin-top: 20px;
+}
+
+.playlist {
+    margin-top: 20px;
+}
+
+ol {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+    cursor: pointer;
+    padding: 5px;
+    /* border: 1px solid #ddd; */
+    border-radius: 10px;
+    color: bisque;
+    height: 20px;
+    font-size: 25px;
+    
+}
+
+li:hover {
+    background-color: #f0f0f0;
+    color: black;
+    height: 25px;
+    
+
+}
+.music1{
+    margin-left: 370px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a>
+           <img class="music1" src="https://imgs.search.brave.com/91ZFjB_2kDlZrQtQgWbMPa-NhGJS0gjaGI8lcTGk1VQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tdXNp/Yy5tdXNpZnkuaXQv/d3AtY29udGVudC91/cGxvYWRzLzIwMjEv/MDEvbG9nby1tdXNp/ZnktMTUwLnBuZw" alt="Logo" />
+        </a>
+        <audio id="audioPlayer" controls>
+            <source src="song.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+        </audio>
+        <div class="playlist">
+            <h2>Library</h2>
+            <ol id="playlist">
+                <li data-src="Ram.mp3">1.Ram Siya Ram...</li>
+                <li data-src="Dheere Dheere.mp3">2.Dheere Dheere...</li>
+                <li data-src="Khamoshiyan.mp3">3.Khamosiya...</li>
+                <li data-src="Pehla Nasha.mp3">4.Pehla Nasha...</li>
+                <li data-src="O Re Piya.mp3">5.O Re Piya...</li>
+                <li data-src="Chand Sifarish.mp3">6.Chand Sifarish...</li>
+                <li data-src="Heeriye.mp3">7.Heeriya heeriya...</li>
+                <li data-src="HOOKAH BAR.mp3">8.HOOKAH BAR...</li>
+                <li data-src="Hasi.mp3">9.Hasi...</li>
+                <li data-src="Kesariya.mp3">10.Kesariya...</li>
+                <li data-src="chalaya.mp3">11.Chalaya...</li>
+                <li data-src="Jai Hanuman.mp3">12.Jay hanuman gyan gun sagar...</li>
+                <li data-src="aa.mp3">13.Arjan Vailly...</li>
+                <li data-src="Tu Hai To Mujhe.mp3">14.Tu hai to to mujhe phir aur kya chahiye...</li>
+                <li data-src="papa.mp3">15.Papa Meri Jaan...</li>
+            </ol>
+        </div>
+    </div>
+    <script src="playlist.js"></script>
+</body>
+</html>

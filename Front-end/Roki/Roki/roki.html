@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        body {
+            background-color: black;
+
+        }
+
+        /* .cls1{
+            width: 100px;
+            height: 100px;
+        } */
+        .cls1 {
+            /* width: full; */
+            /* height: 800px; */
+            padding: 10px;
+            background-color: black;
+            height: 100%;
+
+        }
+
+        .musicList {
+            display: flex;
+            /* flex-direction: column; */
+            justify-content: start;
+            align-items: center;
+            padding: 70px;
+            padding-left: 200px;
+            flex-wrap: wrap;
+            background-color: black;
+        }
+
+        .cls2 {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 220px;
+            width: 200px;
+            margin: 35px;
+            border-radius: 30px;
+            /* background-color: rgb(23, 21, 21); */
+            /* box-shadow: 10px 10px 10px 1px rgb(43, 43, 43); */
+        }
+
+        .img1 {
+            height: 130px;
+            width: 100%;
+            border-radius: 10%;
+        }
+
+        .ad1 {
+            height: 100%;
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        p {
+            font-size: 20px;
+            color: rgb(208, 247, 35);
+            font-weight: 300;
+        }
+
+        .main {
+            display: flex;
+            background-color: rgba(171, 31, 31, 0.208);
+
+        }
+
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 500px;
+            padding: 8px;
+        }
+
+        audio::-webkit-media-controls-panel {
+            background-color: #575c6050;
+
+
+        }
+
+        audio::-webkit-media-controls-play-button {
+            background-color: #ff890c;
+            border-radius: 100%;
+
+        }
+
+        audio::-webkit-media-controls-play-button:hover {
+            background-color: rgba(255, 129, 33, 0.7);
+        }
+
+        .mainaudio {
+            height: 250px;
+            background-color: rgba(41, 39, 39, 0.803);
+            display: flex;
+            padding: 40px;
+        }
+
+        .audio {
+            width: 800px;
+            height: 100px;
+        }
+
+        .yoyo {
+            height: 200px;
+            width: 200px;
+            border-radius: 100%;
+            border: 4px solid rgb(255, 140, 0);
+            margin: 0px 20px 0 10px;
+        }
+
+        .yop {
+            font-size: 3rem;
+        }
+
+        .music-logo {
+            width: 120px;
+            height: 43px;
+            padding: 1px;
+            margin-top: 10px;
+            /* border: 4px solid orange; */
+            /* border-radius: 50px; */
+        }
+
+        .side {
+            margin-top: 20px;
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: #09f075c8;
+            font-family: cursive;
+
+        }
+
+        .yo {
+            color: beige;
+            font-size: 16px;
+        }
+
+        .artist {
+            font-size: 19px;
+            margin: 2px;
+            margin-top: 9px;
+        }
+        .icon{
+            display: flex;
+            flex-direction: column;
+            padding: 4px;
+            margin-top: 20px;
+        }
+        .icon1{
+            height: 20px;
+            width: 20px;
+            margin: 10px;
+            color: green;
+        }
+        .c1{
+            padding: 15px;
+            margin-top: 10px;
+            font-family: cursive;
+        }
+        .navbar{
+            width: 100%;
+            height: 50px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            transition-duration: 0.5s;
+
+        }
+        .partha{
+            color: aquamarine;
+            font-size: 32;
+            font-family: Arial;
+            font-weight: bold;
+            /* transition-property: font-size; */
+        }
+        .partha:hover{
+            color: #e8af73;
+            border: 2px white solid;
+            border-radius: 2px;
+            /* border-top-right-radius: 5px; */
+            border-style: double;
+            /* text-decoration: 3px underline blue; */
+        }
+        .dey{
+            height: 50px;
+            width: 50px;
+            background-size: cover;
+            align-items: center;
+            
+        }
+        .image{
+            height: 30px;
+            width: 30px;
+            margin-top: 20px;
+            /* border-radius: 20px; */
+        }
+        
+        .picture{
+            height: 20px;
+            width: 20px;
+            display: flex;
+            color: aqua;
+            /* justify-content: center; */
+            flex-direction: row;
+            /* margin-top: 30px; */
+            
+        }
+        .img{
+            border-radius: 5px;
+        }
+
+    </style>
+</head>
+
+<body>
+    
+        <!-- <div class="dey"><img src="https://png.pngtree.com/png-clipart/20190705/original/pngtree-vector-search-icon-png-image_4184112.jpg"></div> -->
+    </div>
+    <div class="main">
+        <div class="sidebar">
+            <img class="music-logo" src="https://imgs.search.brave.com/91ZFjB_2kDlZrQtQgWbMPa-NhGJS0gjaGI8lcTGk1VQ/rs:fit:860:0:0/g:ce/aHR0cHM6Ly9tdXNp/Yy5tdXNpZnkuaXQv/d3AtY29udGVudC91/cGxvYWRzLzIwMjEv/MDEvbG9nby1tdXNp/ZnktMTUwLnBuZw" />
+            <!-- <p class="side">Musify</p> -->
+            <br>
+            <p>Artist</p>
+            <hr />
+            <p class="artist">Arijit singh</p>
+            <hr />
+            <p class="artist">Armaan malik</p>
+            <hr />
+            <p class="artist">Shreya ghosal</p>
+            <hr />
+            <p class="artist">Yo Yo Honey sing</p>
+            <hr />
+            <div class="icon">
+                <img class="icon1" src="https://cdn-icons-png.flaticon.com/128/1384/1384070.png"/>
+                <img class="icon1" src="https://cdn-icons-png.flaticon.com/128/747/747562.png"/>
+                <img class="icon1" src="https://cdn-icons-png.flaticon.com/128/3669/3669986.png"/>
+            </div>
+        </div>
+        <div class="cls1">
+            <div class="mainaudio">
+              
+                <img class="yoyo"
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSdofHTsfIN0Ji6Ar4CVNxZs6mQxJ1mhQWYQ&usqp=CAU" />
+                <div class="kudey">
+                    <P class="yop">Kudey Kudey</P>
+                    <p>Released: 2023</p>
+                    <p class="yo">Artists: Yo Yo Honey Singh, Apache Indian, Gill Machhrai, Rony Ajnali</p>
+
+                    <audio class="audio" src="Kuley Kuley.mp3" controls="true" class="audio-1">
+                    </audio>
+                </div>
+            </div>
+            <p class="c1">Trending Songs</p>
+            <div class="musicList">
+                
+                <div class="cls2">
+                    <p>Chalyea</p>
+                    <img class="img1" 
+                            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXjvVu7UTDmTvLfqIi3jItncbd2X4_W6JooQ&usqp=CAU" /><br />
+                    <audio class="ad1" src="chalaya.mp3" controls></audio>
+                </div>
+                <div class="cls2">
+                    <p>Kesariya</p>
+                    <img class="img1"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRM899psv7U-5TToE9F3g4orOSn4vt4loED2A&usqp=CAU" /><br />
+                    <audio class="ad1" src="Kesariya - Kesariya.mp3" controls></audio>
+                </div>
+                <div class="cls2">
+                    <p>Heeriye</p>
+                    <img class="img1" src="heeriye.jpg" /><br />
+                    <audio class="ad1" src="Heeriye.mp3" controls></audio>
+                </div>
+                <div class="cls2">
+                    <p>Dheere Dheere</p>
+                    <img class="img1"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSsvX8AsF9_HbAeGzcqeaRmNiuMmeQoDihY9Q&usqp=CAU" /><br />
+                    <audio class="ad1" src="Dheere Dheere.mp3" controls></audio>
+                </div>
+                <div class="cls2">
+                    <p>Chand Sifarish</p>
+                    <img class="img1"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS-JZB1ezk0Q1CiDNPCdgMbBQYvKGIFnV7sFw&usqp=CAU" /><br />
+                    <audio class="ad1" src="Chand Sifarish.mp3" controls></audio>
+                </div>
+
+                <div class="cls2">
+                    <p>Hasi</p>
+                    <img class="img1"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR6pPHaGiwmD78QsBzYUgL_pJ9DTY0jM8MfvA&usqp=CAU" /><br />
+                    <audio class="ad1" src="Hasi.mp3" controls></audio>
+                </div>
+                <div class="cls2">
+                    <p>O re piya</p>
+                    <img class="img1"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjki24IFrNkepnpOLAuXKnoNGrU8_3MBtNKg&usqp=CAU" /><br />
+                    <audio class="ad1" src="O Re Piya.mp3" controls></audio>
+                </div>
+                <div class="cls2">
+                    <p>Kuley Kuley</p>
+                    <img class="img1"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQXjvVu7UTDmTvLfqIi3jItncbd2X4_W6JooQ&usqp=CAU" /><br />
+                    <audio class="ad1" src="Kuley Kuley.mp3" controls></audio>
+                </div>
+                <div class="cls2">
+                    <p>Pahla Nesha</p>
+                    <img class="img1"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTCFD34iPvUxU0CPT2yLRt192FW1FMwXNzf4w&usqp=CAU" /><br />
+                    <audio class="ad1" src="Pehla Nasha.mp3" controls></audio>
+                </div>
+                <div class="cls2">
+                    <p>Khamoshiyan</p>
+                    <img class="img1" src="khamosiyan.jpg" /><br />
+                    <audio class="ad1" src="Khamoshiyan.mp3" controls></audio>
+                </div>
+                <div class="cls2">
+                    <p>Hookah Bar</p>
+                    <img class="img1"
+                        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRHK6hCvYGVnjHCwzBMShpREGjVzBwmIsvtWA&usqp=CAU" /><br />
+                    <audio class="ad1" src="HOOKAH BAR.mp3" controls></audio>
+                </div>
+                <!-- <div class="cls2">
+                    <p>Pehla Nasha</p>
+                    <img class="img1"
+                        src="https://pagalfree.com/images/128Pehla%20Pyaar%20-%20Kabir%20Singh%20128%20Kbps.jpg" /><br />
+                    <audio class="ad1" src="_Ram Siya Ram(PagalWorld.com.pe).mp3" controls></audio>
+                </div> -->
+                <div class="cls2">
+                    <p>Ram Siya Ram</p>
+                    <img class="img1" src="https://pagalfree.com/images/128Ram%20Siya%20Ram%20-%20Adipurush%20128%20Kbps.jpg" /><br />
+                    <audio class="ad1" src="_Ram Siya Ram(PagalWorld.com.pe).mp3" controls></audio>
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
